@@ -1,0 +1,77 @@
+/*tab-premios*/
+
+.custom-img-card{
+  position: relative;
+  width: 100%;
+  max-height: 85px;
+}
+
+.custom-puntos-card{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 50%;
+  max-width: 52%;
+  min-width: 50%;
+  /*background: rgba(217, 24, 107, 1);*/
+  background-color: #d9186b;
+  height: 30px !important;
+}
+
+.custom-puntos-card p{
+  color: white;
+  text-align: left;
+  font-size: 11px !important;
+  height: 11px !important;
+  font-family: "Platform-Light";
+  padding-left: 2px !important;
+}
+
+.title-premio{
+  color: white !important;
+  text-align: left;
+  font-size: 12px !important;
+  line-height: 1.1 !important;
+  font-family: "Lato-Regular";
+}
+
+.item-body p {
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+
+@media (max-width: 480px) {
+  .card{
+    max-height: 135px !important;
+    min-height: 135px !important;
+  }
+  .card .item-body{
+    max-height: 135px !important;
+    min-height: 135px !important;
+    background-color: #00b5c8;
+  }
+  /*.card .item-body .btn-canjear{*/
+    /*position: absolute;*/
+    /*bottom: 4px;*/
+    /*width: 97%;*/
+  /*}*/
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+  .card{
+    max-height: 135px !important;
+    min-height: 135px !important;
+  }
+  .card .item-body{
+    max-height: 135px !important;
+    min-height: 135px !important;
+    background-color: #00b5c8;
+  }
+  /*.card .item-body .btn-canjear{*/
+    /*position: absolute;*/
+    /*bottom: 4px;*/
+    /*width: 98%;*/
+  /*}*/
+}
+

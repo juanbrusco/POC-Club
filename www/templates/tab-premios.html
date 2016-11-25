@@ -1,9 +1,27 @@
+<!--https://github.com/DarrylD/ionic-ripple-->
 <ion-view view-title="Premios">
-  <ion-content>
-    <ion-list>
-    <ion-toggle  ng-model="settings.enableFriends">
-        Soy un premio
-    </ion-toggle>
-    </ion-list>
+  <ion-content ng-controller="PremiosCtrl" ng-init="allPremios()">
+
+
+
+    <div collection-repeat="premio in premios"
+         item-width="33%">
+
+          <div class="list card margin-0" ng-click="showConfirm(premios[$index].id)">
+            <div
+              class="item item-body padding-bottom-0-xs padding-top-0-xs padding-left-0-xs padding-right-0-xs margin-0">
+              <div class="image padding-bottom-0">
+                <img ng-src="{{premios[$index].img}}" class="custom-img-card"/>
+                <div class="custom-puntos-card padding-0 margin-0">
+                  <p class="margin-0-xs">{{premios[$index].puntos}} pts</p>
+                  <p class="margin-0-xs">+${{premios[$index].pesos}}</p>
+                </div>
+              </div>
+              <p class="padding-left-5 margin-0 title-premio">{{premios[$index].title}}</p>
+            </div>
+          </div>
+
+      </div>
+
   </ion-content>
 </ion-view>
