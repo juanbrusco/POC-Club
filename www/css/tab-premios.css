@@ -6,25 +6,24 @@
   max-height: 85px;
 }
 
-.custom-puntos-card{
+.custom-destacado{
   position: absolute;
   top: 0px;
   left: 0px;
-  width: 50%;
-  max-width: 52%;
-  min-width: 50%;
+  width: 20%;
+  max-width: 20%;
+  min-width: 20%;
   /*background: rgba(217, 24, 107, 1);*/
   background-color: #d9186b;
-  height: 30px !important;
+  height: 20px !important;
 }
 
-.custom-puntos-card p{
+.custom-destacado p{
   color: white;
-  text-align: left;
-  font-size: 11px !important;
-  height: 11px !important;
+  text-align: center;
+  font-size: 13px !important;
+  height: 15px !important;
   font-family: "Platform-Light";
-  padding-left: 2px !important;
 }
 
 .title-premio{
