@@ -26,6 +26,12 @@
 
       <a class="item item-thumbnail-left" ng-click="showPopup(premios[$index].id)" ng-repeat="premio in premios">
         <img class="custom-img-card" ng-src="{{premios[$index].img}}"/>
+
+        <!--if premio destacado-->
+        <div class="custom-destacado">
+          <p>Destacado</p>
+        </div>
+
         <div>
           <p class="title-premio">{{premios[$index].desc}}</p>
           <span class="puntos-premio"><strong>{{premios[$index].puntos}}</strong>&nbsp;Puntos&nbsp;+&nbsp;<strong>${{premios[$index].pesos}}</strong></span>
