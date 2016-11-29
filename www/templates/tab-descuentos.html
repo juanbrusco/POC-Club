@@ -1,15 +1,47 @@
 <ion-view view-title="Descuentos">
-  <ion-content>
-    <ion-list>
-      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="descuento in descuentos" type="item-text-wrap" href="#/tab/descuentos/{{descuento.id}}">
-        <img ng-src="{{descuento.face}}">
-        <h2>{{descuento.name}}</h2>
-        <p>{{descuento.lastText}}</p>
-        <i class="icon ion-chevron-right icon-accessory"></i>
-        <ion-option-button class="button-assertive" ng-click="remove(descuento)">
-          Delete
-        </ion-option-button>
-      </ion-item>
+  <ion-content ng-controller="DescuentosCtrl">
+    <ion-list item>
+
+
+    <!--  <div collection-repeat="descuento in descuentos"
+           item-width="33%">
+
+        <div class="list card margin-0" ng-click="showConfirm(descuento.id)">
+          <div
+            class="item item-body padding-bottom-0-xs padding-top-0-xs padding-left-0-xs padding-right-0-xs margin-0">
+            <div class="image padding-bottom-0">
+              <img ng-src="{{descuento.logoProveedor}}" class="custom-img-card"/>
+              <div class="custom-puntos-card padding-0 margin-0">
+                <p class="margin-0-xs">{{descuento.heading}}</p>
+              </div>
+            </div>
+            <p class="padding-left-5 margin-0 title-premio">{{descuento.name}}</p>
+          </div>
+        </div>
+
+      </div>-->
+
+      <div class="list" collection-repeat="descuento in descuentos">
+
+        <a class="item item-thumbnail-left" ng-click="showConfirm(descuento.id)">
+          <img class="custom-img-card" ng-src="{{descuento.logoProveedor}}"/>
+            <p class="title-descuento">{{descuento.name}}</p>
+            <img alt="*" src="../img/ico-phonito.png">
+            <span class="title-descuento">Enviá gratis </span><span class="text-primary text-uppercase">{{descuento.keywordSMS}} </span><span class="title-premio">al </span><span class="text-primary">3372</span>
+
+             <div class="custom-barra-descuentos">
+              <div class="category descuento1"></div>
+              <div class="category descuento2"></div>
+              <div class="category descuento3"></div>
+              <div class="category descuento4"></div>
+            </div>
+        </a>
+
+      </div>
     </ion-list>
+    <ion-infinite-scroll
+      on-infinite="loadMore()"
+      distance="1%">
+    </ion-infinite-scroll>
   </ion-content>
 </ion-view>

@@ -1,0 +1,48 @@
+.title-descuento{
+  /*color: white !important;*/
+  text-align: left;
+  font-size: 12px !important;
+  /*line-height: 1.1 !important;*/
+  font-family: "Lato-Regular";
+  overflow: visible !important;
+  white-space: normal !important;
+}
+
+.text-primary {
+  /*color: white !important;*/
+  text-align: left;
+  font-size: 12px !important;
+  /*line-height: 1.1 !important;*/
+  font-family: "Lato-Regular";
+  overflow: visible !important;
+  white-space: normal !important;
+  color: #00b4c5;
+}
+
+.text-uppercase, .initialism {
+  text-transform: uppercase;
+}
+.custom-barra-descuentos .category.descuento1 {
+  background-image: url(../img/club-barra-bg1.png);
+}
+
+.custom-barra-descuentos .category.descuento2 {
+  background-image: url(../img/club-barra-bg2.png);
+}
+
+.custom-barra-descuentos .category.descuento3 {
+  background-image: url(../img/club-barra-bg3.png);
+}
+
+.custom-barra-descuentos .category.descuento4 {
+  background-image: url(../img/club-barra-bg4.png);
+}
+.custom-barra-descuentos .category {
+  text-align: center;
+  padding-top: 1px;
+  width: 15px;
+  height: 15px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: inline-block;
+}
