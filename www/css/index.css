@@ -33,3 +33,59 @@ ion-tabs.tabs-striped.tabs-color-active-positive .tab-item.tab-item-active, ion-
   border-color: #00b5c8;
   color: #00b5c8;
 }
+.tabs .tab-item .icon.gif {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  height: 30px;
+  width: 30px;
+  background-image: url('../img/icon-gif.png');
+  background-size:contain;
+}
+
+.tabs .tab-item .icon.compass {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  height: 30px;
+  width: 30px;
+  background-image: url('../img/icon-compass.png');
+  background-size:contain;
+}
+
+.tabs .tab-item .icon.home {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  height: 30px;
+  width: 30px;
+  background-image: url('../img/icon-home.png');
+  background-size:contain;
+}
+
+.tabs .tab-item .icon.benefit {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  height: 30px;
+  width: 30px;
+  background-image: url('../img/icon-benefit.png');
+  background-size:contain;
+}
+
+.tabs .tab-item .tab-title {
+  font-family: "Platform-Light";
+}
+
+.tabs .tab-item-active .tab-title {
+  font-family: "Platform-Regular";
+}
+
+@media screen and (orientation:landscape) {
+  .logo-header{
+    width: 20%;
+  }
+}
+
+@media screen and (orientation:portrait) {
+  .logo-header{
+    width: 35%;
+  }
+}
+

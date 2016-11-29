@@ -52,6 +52,16 @@ angular.module('clubApp', ['ionic',
       }
     }
   })
+    //Cercanos
+    .state('tab.cercanos', {
+      url: '/cercanos',
+      views: {
+        'tab-cercanos': {
+          templateUrl: 'templates/tab-descuentos.html',
+          controller: 'DescuentosCtrl'
+        }
+      }
+    })
   //Descuentos
   .state('tab.descuentos', {
       url: '/descuentos',
