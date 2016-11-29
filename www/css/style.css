@@ -1,22 +1,27 @@
+/*Fonts import*/
+
 @font-face {
   font-family: "Lato-Regular";
   src: url("fonts/Lato-Regular.ttf?v=2.0.1") format("truetype");
   font-weight: normal;
-  font-style: normal; }
+  font-style: normal;
+}
 
 @font-face {
   font-family: "Platform-Regular";
   src: url("fonts/platform-regular.ttf?v=2.0.1") format("truetype");
   font-weight: normal;
-  font-style: normal; }
+  font-style: normal;
+}
 
 @font-face {
   font-family: "Platform-Light";
   src: url("fonts/platform-light.ttf?v=2.0.1") format("truetype");
   font-weight: normal;
-  font-style: normal; }
+  font-style: normal;
+}
 
-
+/*Paddings & Margins*/
 
 .padding-0 {
   padding: 0px
@@ -302,210 +307,279 @@
   .padding-0-xs {
     padding: 0px !important
   }
+
   .padding-top-0-xs {
     padding-top: 0px !important
   }
+
   .padding-right-0-xs {
     padding-right: 0px !important
   }
+
   .padding-bottom-0-xs {
     padding-bottom: 0px !important
   }
+
   .padding-left-0-xs {
     padding-left: 0px !important
   }
+
   .padding-5-xs {
     padding: 5px !important
   }
+
   .padding-top-5-xs {
     padding-top: 5px !important
   }
+
   .padding-right-5-xs {
     padding-right: 5px !important
   }
+
   .padding-bottom-5-xs {
     padding-bottom: 5px !important
   }
+
   .padding-left-5-xs {
     padding-left: 5px !important
   }
+
   .padding-10-xs {
     padding: 10px !important
   }
+
   .padding-top-10-xs {
     padding-top: 10px !important
   }
+
   .padding-right-10-xs {
     padding-right: 10px !important
   }
+
   .padding-bottom-10-xs {
     padding-bottom: 10px !important
   }
+
   .padding-left-10-xs {
     padding-left: 10px !important
   }
+
   .padding-15-xs {
     padding: 15px !important
   }
+
   .padding-top-15-xs {
     padding-top: 15px !important
   }
+
   .padding-right-15-xs {
     padding-right: 15px !important
   }
+
   .padding-bottom-15-xs {
     padding-bottom: 15px !important
   }
+
   .padding-left-15-xs {
     padding-left: 15px !important
   }
+
   .padding-20-xs {
     padding: 20px !important
   }
+
   .padding-top-20-xs {
     padding-top: 20px !important
   }
+
   .padding-right-20-xs {
     padding-right: 20px !important
   }
+
   .padding-bottom-20-xs {
     padding-bottom: 20px !important
   }
+
   .padding-left-20-xs {
     padding-left: 20px !important
   }
+
   .padding-25-xs {
     padding: 25px !important
   }
+
   .padding-top-25-xs {
     padding-top: 25px !important
   }
+
   .padding-right-25-xs {
     padding-right: 25px !important
   }
+
   .padding-bottom-25-xs {
     padding-bottom: 25px !important
   }
+
   .padding-left-25-xs {
     padding-left: 25px !important
   }
+
   .padding-50-xs {
     padding: 50px !important
   }
+
   .padding-top-50-xs {
     padding-top: 50px !important
   }
+
   .padding-right-50-xs {
     padding-right: 50px !important
   }
+
   .padding-bottom-50-xs {
     padding-bottom: 50px !important
   }
+
   .padding-left-50-xs {
     padding-left: 50px !important
   }
+
   .margin-0-xs {
     margin: 0px !important
   }
+
   .margin-top-0-xs {
     margin-top: 0px !important
   }
+
   .margin-right-0-xs {
     margin-right: 0px !important
   }
+
   .margin-bottom-0-xs {
     margin-bottom: 0px !important
   }
+
   .margin-left-0-xs {
     margin-left: 0px !important
   }
+
   .margin-5-xs {
     margin: 5px !important
   }
+
   .margin-top-5-xs {
     margin-top: 5px !important
   }
+
   .margin-right-5-xs {
     margin-right: 5px !important
   }
+
   .margin-bottom-5-xs {
     margin-bottom: 5px !important
   }
+
   .margin-left-5-xs {
     margin-left: 5px !important
   }
+
   .margin-10-xs {
     margin: 10px !important
   }
+
   .margin-top-10-xs {
     margin-top: 10px !important
   }
+
   .margin-right-10-xs {
     margin-right: 10px !important
   }
+
   .margin-bottom-10-xs {
     margin-bottom: 10px !important
   }
+
   .margin-left-10-xs {
     margin-left: 10px !important
   }
+
   .margin-15-xs {
     margin: 15px !important
   }
+
   .margin-top-15-xs {
     margin-top: 15px !important
   }
+
   .margin-right-15-xs {
     margin-right: 15px !important
   }
+
   .margin-bottom-15-xs {
     margin-bottom: 15px !important
   }
+
   .margin-left-15-xs {
     margin-left: 15px !important
   }
+
   .margin-20-xs {
     margin: 20px !important
   }
+
   .margin-top-20-xs {
     margin-top: 20px !important
   }
+
   .margin-right-20-xs {
     margin-right: 20px !important
   }
+
   .margin-bottom-20-xs {
     margin-bottom: 20px !important
   }
+
   .margin-left-20-xs {
     margin-left: 20px !important
   }
+
   .margin-25-xs {
     margin: 25px !important
   }
+
   .margin-top-25-xs {
     margin-top: 25px !important
   }
+
   .margin-right-25-xs {
     margin-right: 25px !important
   }
+
   .margin-bottom-25-xs {
     margin-bottom: 25px !important
   }
+
   .margin-left-25-xs {
     margin-left: 25px !important
   }
+
   .margin-50-xs {
     margin: 50px !important
   }
+
   .margin-top-50-xs {
     margin-top: 50px !important
   }
+
   .margin-right-50-xs {
     margin-right: 50px !important
   }
+
   .margin-bottom-50-xs {
     margin-bottom: 50px !important
   }
+
   .margin-left-50-xs {
     margin-left: 50px !important
   }
@@ -515,211 +589,336 @@
   .padding-0-sm {
     padding: 0px !important
   }
+
   .padding-top-0-sm {
     padding-top: 0px !important
   }
+
   .padding-right-0-sm {
     padding-right: 0px !important
   }
+
   .padding-bottom-0-sm {
     padding-bottom: 0px !important
   }
+
   .padding-left-0-sm {
     padding-left: 0px !important
   }
+
   .padding-5-sm {
     padding: 5px !important
   }
+
   .padding-top-5-sm {
     padding-top: 5px !important
   }
+
   .padding-right-5-sm {
     padding-right: 5px !important
   }
+
   .padding-bottom-5-sm {
     padding-bottom: 5px !important
   }
+
   .padding-left-5-sm {
     padding-left: 5px !important
   }
+
   .padding-10-sm {
     padding: 10px !important
   }
+
   .padding-top-10-sm {
     padding-top: 10px !important
   }
+
   .padding-right-10-sm {
     padding-right: 10px !important
   }
+
   .padding-bottom-10-sm {
     padding-bottom: 10px !important
   }
+
   .padding-left-10-sm {
     padding-left: 10px !important
   }
+
   .padding-15-sm {
     padding: 15px !important
   }
+
   .padding-top-15-sm {
     padding-top: 15px !important
   }
+
   .padding-right-15-sm {
     padding-right: 15px !important
   }
+
   .padding-bottom-15-sm {
     padding-bottom: 15px !important
   }
+
   .padding-left-15-sm {
     padding-left: 15px !important
   }
+
   .padding-20-sm {
     padding: 20px !important
   }
+
   .padding-top-20-sm {
     padding-top: 20px !important
   }
+
   .padding-right-20-sm {
     padding-right: 20px !important
   }
+
   .padding-bottom-20-sm {
     padding-bottom: 20px !important
   }
+
   .padding-left-20-sm {
     padding-left: 20px !important
   }
+
   .padding-25-sm {
     padding: 25px !important
   }
+
   .padding-top-25-sm {
     padding-top: 25px !important
   }
+
   .padding-right-25-sm {
     padding-right: 25px !important
   }
+
   .padding-bottom-25-sm {
     padding-bottom: 25px !important
   }
+
   .padding-left-25-sm {
     padding-left: 25px !important
   }
+
   .padding-50-sm {
     padding: 50px !important
   }
+
   .padding-top-50-sm {
     padding-top: 50px !important
   }
+
   .padding-right-50-sm {
     padding-right: 50px !important
   }
+
   .padding-bottom-50-sm {
     padding-bottom: 50px !important
   }
+
   .padding-left-50-sm {
     padding-left: 50px !important
   }
+
   .margin-0-sm {
     margin: 0px !important
   }
+
   .margin-top-0-sm {
     margin-top: 0px !important
   }
+
   .margin-right-0-sm {
     margin-right: 0px !important
   }
+
   .margin-bottom-0-sm {
     margin-bottom: 0px !important
   }
+
   .margin-left-0-sm {
     margin-left: 0px !important
   }
+
   .margin-5-sm {
     margin: 5px !important
   }
+
   .margin-top-5-sm {
     margin-top: 5px !important
   }
+
   .margin-right-5-sm {
     margin-right: 5px !important
   }
+
   .margin-bottom-5-sm {
     margin-bottom: 5px !important
   }
+
   .margin-left-5-sm {
     margin-left: 5px !important
   }
+
   .margin-10-sm {
     margin: 10px !important
   }
+
   .margin-top-10-sm {
     margin-top: 10px !important
   }
+
   .margin-right-10-sm {
     margin-right: 10px !important
   }
+
   .margin-bottom-10-sm {
     margin-bottom: 10px !important
   }
+
   .margin-left-10-sm {
     margin-left: 10px !important
   }
+
   .margin-15-sm {
     margin: 15px !important
   }
+
   .margin-top-15-sm {
     margin-top: 15px !important
   }
+
   .margin-right-15-sm {
     margin-right: 15px !important
   }
+
   .margin-bottom-15-sm {
     margin-bottom: 15px !important
   }
+
   .margin-left-15-sm {
     margin-left: 15px !important
   }
+
   .margin-20-sm {
     margin: 20px !important
   }
+
   .margin-top-20-sm {
     margin-top: 20px !important
   }
+
   .margin-right-20-sm {
     margin-right: 20px !important
   }
+
   .margin-bottom-20-sm {
     margin-bottom: 20px !important
   }
+
   .margin-left-20-sm {
     margin-left: 20px !important
   }
+
   .margin-25-sm {
     margin: 25px !important
   }
+
   .margin-top-25-sm {
     margin-top: 25px !important
   }
+
   .margin-right-25-sm {
     margin-right: 25px !important
   }
+
   .margin-bottom-25-sm {
     margin-bottom: 25px !important
   }
+
   .margin-left-25-sm {
     margin-left: 25px !important
   }
+
   .margin-50-sm {
     margin: 50px !important
   }
+
   .margin-top-50-sm {
     margin-top: 50px !important
   }
+
   .margin-right-50-sm {
     margin-right: 50px !important
   }
+
   .margin-bottom-50-sm {
     margin-bottom: 50px !important
   }
+
   .margin-left-50-sm {
     margin-left: 50px !important
   }
 }
+
+/*Buttons*/
+
+.button.button-positive {
+  border-color: transparent;
+  background-color: #d9186b;
+  color: #fff;
+  font-family: "Platform-Regular";
+}
+
+.button.button-positive:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.button.button-positive.active, .button.button-positive.activated {
+  border-color: #b9175c;
+  background-color: #b9175c;
+}
+
+.button.button-light {
+  border-color: transparent;
+  background-color: #fff;
+  color: #d9186b;
+  font-family: "Platform-Regular";
+}
+
+.button.button-light:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.button.button-light.active, .button.button-light.activated {
+  border-color: #f8f8f8;
+  background-color: #f8f8f8;
+  color: #b9175c;
+}
+
+/*Popup*/
+
+.popup-title {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  font-family: "Platform-Regular";
+}
+
+.popup-sub-title {
+  margin: 5px 0 0 0;
+  padding: 0;
+  font-weight: normal;
+  font-size: 11px;
+  font-family: "Platform-Regular";
+}
+
+

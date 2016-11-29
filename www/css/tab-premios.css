@@ -28,10 +28,18 @@
 }
 
 .title-premio{
-  color: white !important;
+  /*color: white !important;*/
   text-align: left;
   font-size: 12px !important;
-  line-height: 1.1 !important;
+  /*line-height: 1.1 !important;*/
+  font-family: "Lato-Regular";
+  overflow: visible !important;
+  white-space: normal !important;
+}
+
+.puntos-premio{
+  text-align: left;
+  font-size: 12px !important;
   font-family: "Lato-Regular";
 }
 

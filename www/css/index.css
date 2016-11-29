@@ -1,0 +1,35 @@
+.bar.bar-positive {
+  border-color: #00b5c8;
+  background-color: #00b5c8;
+}
+
+.bar.bar-positive .title {
+  color: #fff;
+  font-family: "Platform-Regular";
+}
+
+.bar.bar-positive.bar-footer {
+  background-image: linear-gradient(180deg, #006c76, #006c76 50%, transparent 50%);
+}
+
+.tabs-striped .tabs {
+  background-color: #fff;
+  background-image: none;
+  border: none;
+  border-bottom: 1px solid #fff;
+  padding-top: 2px;
+  font-family: "Lato-Regular";
+}
+
+ion-tabs.tabs-color-active-positive .tab-item {
+  color: #00b5c8;
+}
+
+ion-tabs.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-color-active-positive .tab-item.active, ion-tabs.tabs-color-active-positive .tab-item.activated {
+  color: #00b5c8;
+}
+
+ion-tabs.tabs-striped.tabs-color-active-positive .tab-item.tab-item-active, ion-tabs.tabs-striped.tabs-color-active-positive .tab-item.active, ion-tabs.tabs-striped.tabs-color-active-positive .tab-item.activated {
+  border-color: #00b5c8;
+  color: #00b5c8;
+}
