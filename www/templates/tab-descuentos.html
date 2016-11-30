@@ -1,46 +1,80 @@
-<ion-view  view-title="<img  src='../img/clubIsoLogoTipo.png' class='logo-header'/>">
-  <ion-content ng-controller="DescuentosCtrl">
-    <ion-list item>
-
-    <!--  <div collection-repeat="descuento in descuentos"
-           item-width="33%">
-
-        <div class="list card margin-0" ng-click="showConfirm(descuento.id)">
-          <div
-            class="item item-body padding-bottom-0-xs padding-top-0-xs padding-left-0-xs padding-right-0-xs margin-0">
-            <div class="image padding-bottom-0">
-              <img ng-src="{{descuento.logoProveedor}}" class="custom-img-card"/>
-              <div class="custom-puntos-card padding-0 margin-0">
-                <p class="margin-0-xs">{{descuento.heading}}</p>
-              </div>
+<ion-view  view-title="<img  src='../img/clubIsoLogoTipo.png' class='logo-header'/>" ng-controller="DescuentosCtrl">
+    <ion-content >
+      <span class="text-primary text-uppercase">DESTACADOS</span>
+      <ion-list>
+        <div class="list">
+          <a class="item item-thumbnail-left" ng-click="showConfirm(destacado.id)" ng-repeat="destacado in destacados">
+            <img class="custom-img-card" ng-src="{{destacado.logoProveedor}}"/>
+            <!--if premio destacado-->
+            <div class="custom-destacado">
+              <p>Destacado</p>
             </div>
-            <p class="padding-left-5 margin-0 title-premio">{{descuento.name}}</p>
-          </div>
-        </div>
-
-      </div>-->
-
-      <div class="list" collection-repeat="descuento in descuentos">
-
-        <a class="item item-thumbnail-left" ng-click="showConfirm(descuento.id)">
-          <img class="custom-img-card" ng-src="{{descuento.logoProveedor}}"/>
-            <p class="title-descuento">{{descuento.name}}</p>
+            <p class="title-descuento">{{destacado.name}}</p>
             <img alt="*" src="../img/ico-phonito.png">
-            <span class="title-descuento">Enviá gratis </span><span class="text-primary text-uppercase">{{descuento.keywordSMS}} </span><span class="title-premio">al </span><span class="text-primary">3372</span>
+            <span class="title-descuento">Enviá gratis </span><span class="text-primary text-uppercase">{{destacado.keywordSMS}} </span><span class="title-premio">al </span><span class="text-primary">3372</span>
 
-             <div class="custom-barra-descuentos">
+            <div class="custom-barra-descuentos">
               <div class="category descuento1"></div>
               <div class="category descuento2"></div>
               <div class="category descuento3"></div>
               <div class="category descuento4"></div>
             </div>
-        </a>
+          </a>
 
-      </div>
-    </ion-list>
-    <ion-infinite-scroll
-      on-infinite="loadMore()"
-      distance="1%">
-    </ion-infinite-scroll>
-  </ion-content>
-</ion-view>
+        </div>
+
+      </ion-list>
+      <span class="text-primary text-uppercase">CATALOGO COMPLETO</span>
+      <ion-list>
+        <div class="list">
+          <a class="item item-thumbnail-left" ng-click="showConfirm(descuento.id)" ng-repeat="descuento in descuentos">
+            <img class="custom-img-card" ng-src="{{descuento.logoProveedor}}"/>
+            <p class="title-descuento">{{descuento.name}}</p>
+            <img alt="*" src="../img/ico-phonito.png">
+            <span class="title-descuento">Enviá gratis </span><span class="text-primary text-uppercase">{{descuento.keywordSMS}} </span><span class="title-premio">al </span><span class="text-primary">3372</span>
+
+            <div class="custom-barra-descuentos">
+              <div class="category descuento1"></div>
+              <div class="category descuento2"></div>
+              <div class="category descuento3"></div>
+              <div class="category descuento4"></div>
+            </div>
+          </a>
+
+        </div>
+      </ion-list>
+      <ion-infinite-scroll
+        on-infinite="loadMore()"
+        distance="1%">
+      </ion-infinite-scroll>
+    </ion-content>
+
+    <!-- </ion-content>
+
+     <ion-content class=".testHello ">
+       <ion-list>
+         <div class="margin-top:200px!important;" collection-repeat="descuento in descuentos">
+
+           <a class="item item-thumbnail-left" ng-click="showConfirm(descuento.id)">
+             <img class="custom-img-card" ng-src="{{descuento.logoProveedor}}"/>
+             <p class="title-descuento">{{descuento.name}}</p>
+             <img alt="*" src="../img/ico-phonito.png">
+             <span class="title-descuento">Enviá gratis </span><span class="text-primary text-uppercase">{{descuento.keywordSMS}} </span><span class="title-premio">al </span><span class="text-primary">3372</span>
+
+             <div class="custom-barra-descuentos">
+               <div class="category descuento1"></div>
+               <div class="category descuento2"></div>
+               <div class="category descuento3"></div>
+               <div class="category descuento4"></div>
+             </div>
+           </a>
+
+         </div>
+       </ion-list>
+        <ion-infinite-scroll
+          on-infinite="loadMore()"
+          distance="1%">
+        </ion-infinite-scroll>
+     </ion-content>
+   -->
+  </ion-view>
