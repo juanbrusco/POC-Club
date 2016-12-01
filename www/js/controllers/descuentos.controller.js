@@ -1,8 +1,8 @@
 angular.module('descuentos.controller', [])
   .controller('DescuentosCtrl', function($scope,$ionicPopup,Descuentos) {
-
+    $scope.descuentos = [];
     Descuentos.all().then(function(data){
-      $scope.descuentos = data
+      $scope.destacados = data
     });
 
     $scope.loadMore =function() {
