@@ -1,5 +1,5 @@
 angular.module('descuentos.controller', [])
-  .controller('DescuentosCtrl', function($scope,$ionicPopup,Descuentos) {
+  .controller('DescuentosCtrl', function($scope,$ionicPopup,Descuentos,$state) {
     $scope.descuentos = [];
     Descuentos.all().then(function(data){
       $scope.destacados = data
@@ -17,7 +17,30 @@ angular.module('descuentos.controller', [])
       $scope.loadMore();
     });
 
+    // PopUp custom
+    $scope.showPopup = function(descuentoId) {
+      var descuento = Descuentos.getDescuento(descuentoId);
+      $scope.data = {};
 
+      // An elaborate, custom popup
+      var myPopup = $ionicPopup.show({
+        template: '<img ng-src="' + descuento.logoProveedor + '" style="width: 60px; height: 40px;"/>',
+        title: 'Canjear Premio',
+        subTitle: descuento.name,
+        scope: $scope,
+        buttons: [
+          { text: 'Cancelar',
+            type: 'button-light'},
+          {
+            text: '<b>Canjear</b>',
+            type: 'button-positive',
+            onTap: function() {
+              $state.go('tab.descuentos-detail', {'descuentoId': descuento.id});
+            }
+          }
+        ]
+      });
+    };
 
     // A confirm dialog
     $scope.showConfirm = function(descuentoId) {

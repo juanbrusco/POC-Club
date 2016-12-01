@@ -73,15 +73,17 @@ angular.module('clubApp', ['ionic',
       }
     })
     .state('tab.descuentos-detail', {
-      url: '/descuentos/:descuentosId',
+      url: '/',
       views: {
         'tab-descuentos': {
           templateUrl: 'templates/descuentos-detail.html',
           controller: 'DescuentosDetailCtrl'
         }
-      }
+      },
+      params: {'descuentoId': null}
     })
-    //Premios
+
+     //Premios
   .state('tab.premios', {
     url: '/premios',
     views: {

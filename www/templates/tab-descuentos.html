@@ -3,7 +3,7 @@
       <span class="text-primary text-uppercase">DESTACADOS</span>
       <ion-list>
         <div class="list">
-          <a class="item item-thumbnail-left" ng-click="showConfirm(destacado.id)" ng-repeat="destacado in destacados">
+          <a class="item item-thumbnail-left" ng-click="showPopup(destacado.id)" ng-repeat="destacado in destacados" >
             <img class="custom-img-card" ng-src="{{destacado.logoProveedor}}"/>
             <!--if premio destacado-->
             <div class="custom-destacado">
@@ -27,7 +27,7 @@
       <span class="text-primary text-uppercase">CATALOGO COMPLETO</span>
       <ion-list>
         <div class="list">
-          <a class="item item-thumbnail-left" ng-click="showConfirm(descuento.id)" ng-repeat="descuento in descuentos">
+          <a class="item item-thumbnail-left" ng-click="showPopup(descuento.id)" ng-repeat="descuento in descuentos">
             <img class="custom-img-card" ng-src="{{descuento.logoProveedor}}"/>
             <p class="title-descuento">{{descuento.name}}</p>
             <img alt="*" src="../img/ico-phonito.png">

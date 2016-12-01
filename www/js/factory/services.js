@@ -27,6 +27,11 @@ angular.module('starter.services', [])
             return all[i];
           }
         }
+        for (var j = 0; j < more.length; j++) {
+          if (more[j].id === parseInt(descuentoId)) {
+            return more[j];
+          }
+        }
         return null;
       },
 
@@ -92,7 +97,7 @@ angular.module('starter.services', [])
         img: 'http://resources.personal.com.ar/images/test/Pack-1.png',
         puntos: '999999',
         pesos: '99.999,99'
-      },
+      }
 
     ];
 
