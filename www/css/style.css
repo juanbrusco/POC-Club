@@ -867,6 +867,7 @@
   }
 }
 
+
 /*Buttons*/
 
 .button.button-positive {
@@ -921,4 +922,12 @@
   font-family: "Platform-Regular";
 }
 
+.spinner-android {
+  stroke: #d9186b;
+}
+
+.spinner-ios,
+.spinner-ios-small {
+  stroke: #d9186b;
+}
 

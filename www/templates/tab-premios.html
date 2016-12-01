@@ -1,5 +1,5 @@
 <!--https://github.com/DarrylD/ionic-ripple-->
-<ion-view  view-title="<img  src='../img/clubIsoLogoTipo.png' class='logo-header'/>">
+<ion-view view-title="<img  src='../img/clubIsoLogoTipo.png' class='logo-header'/>">
   <ion-content ng-controller="PremiosCtrl" ng-init="allPremios()">
 
     <!--<div collection-repeat="premio in premios"-->
@@ -23,19 +23,44 @@
 
     <div class="list">
 
-      <a class="item item-thumbnail-left" ng-click="showPopup(premios[$index].id)" ng-repeat="premio in premios">
-        <img class="custom-img-card" ng-src="{{premios[$index].img}}"/>
+      <!--<a class="item item-thumbnail-left" ng-click="showPopup(premios[$index].id)" ng-repeat="premio in premios">-->
 
-        <!--if premio destacado-->
-        <div class="custom-destacado">
-          <p>Destacado</p>
-        </div>
 
-        <div>
-          <p class="title-premio">{{premios[$index].desc}}</p>
-          <span class="puntos-premio"><strong>{{premios[$index].puntos}}</strong>&nbsp;Puntos&nbsp;+&nbsp;<strong>${{premios[$index].pesos}}</strong></span>
+      <div class="item row" ng-click="showPopup(premios[$index].id)" ng-repeat="premio in premios">
+        <div class="col col-33">
+          <img class="custom-img" ng-src="{{premios[$index].img}}"/>
+          <div class="custom-destacado">
+            <p>Destacado</p>
+          </div>
         </div>
-      </a>
+        <div class="col col-33">
+          <div class="content-middle">
+            <p class="title-premio item-middle">{{premios[$index].desc}}</p>
+          </div>
+        </div>
+        <div class="col col-33">
+          <div class="content-middle" style="width: 100%;">
+            <span class="item-middle">
+            <p class="puntos-premio"><strong>{{premios[$index].puntos}}</strong>&nbsp;Puntos</p>
+            <p class="puntos-premio">+&nbsp;<strong>${{premios[$index].pesos}}</strong></p>
+            </span>
+          </div>
+        </div>
+      </div>
+
+
+      <!--<img class="custom-img" ng-src="{{premios[$index].img}}"/>-->
+
+      <!--&lt;!&ndash;if premio destacado&ndash;&gt;-->
+      <!--<div class="custom-destacado">-->
+      <!--<p>Destacado</p>-->
+      <!--</div>-->
+
+      <!--<div>-->
+      <!--<p class="title-premio">{{premios[$index].desc}}</p>-->
+      <!--<span class="puntos-premio"><strong>{{premios[$index].puntos}}</strong>&nbsp;Puntos&nbsp;+&nbsp;<strong>${{premios[$index].pesos}}</strong></span>-->
+      <!--</div>-->
+      <!--</a>-->
 
     </div>
   </ion-content>
