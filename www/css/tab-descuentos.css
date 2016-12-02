@@ -46,3 +46,12 @@
   background-position: center center;
   display: inline-block;
 }
+
+#map {
+  height: 50%;
+  width: 100%;
+}
+
+scroll {
+  height: 100%;
+}

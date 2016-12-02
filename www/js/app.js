@@ -6,6 +6,7 @@
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
 angular.module('clubApp', ['ionic',
+                           'ngCordova',
                            'home.controller',
                            'descuentos.controller',
                            'premios.controller',
