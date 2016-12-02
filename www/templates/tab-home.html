@@ -1,5 +1,17 @@
 <ion-view  view-title="<img  src='../img/clubIsoLogoTipo.png' class='logo-header'/>">
-  <ion-content class="padding">
-    <h2>HOME!!! BANNER?</h2>
+  <ion-content id="banner">
+    <section class="swipe">
+      <swiper effect="coverflow"
+              grab-cursor="false"
+              style="position: absolute;">
+        <slides>
+          <slide ng-repeat="slide in slides">
+              <img href="{{slide.link}}" ng-click="openWindow('{{slide.link}}')" ng-src={{slide.img}}/>
+          </slide>
+        </slides>
+        <prev></prev>
+        <next></next>
+      </swiper>
+    </section>
   </ion-content>
 </ion-view>

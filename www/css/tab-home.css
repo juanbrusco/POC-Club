@@ -1,0 +1,22 @@
+.swiper-slide img {
+  width: 100%;
+  height: 100%; }
+
+@media screen and (orientation:portrait) {
+  .swiper-slide img{
+    height: 100%;
+    width: 100%
+  }
+  .swiper-container {
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    height: 50%;
+    /* Fix of Webkit flickering */
+    z-index: 1; }
+}
+@media screen and (orientation:landscape) {
+  .swiper-slide img {
+    width: 100%;
+    height: 100%; }
+}
