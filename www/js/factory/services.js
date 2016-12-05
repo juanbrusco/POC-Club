@@ -21,7 +21,7 @@ angular.module('starter.services', [])
     return {
       destacados: getDesDestacados,
 
-      getDescuento: function(descuentoId) {
+     /* getDescuento: function(descuentoId) {
         for (var i = 0; i < dest.length; i++) {
           if (dest[i].id === parseInt(descuentoId)) {
             return dest[i];
@@ -33,7 +33,7 @@ angular.module('starter.services', [])
           }
         }
         return null;
-      },
+      },*/
 
       loadMore: loadMore,
 
@@ -68,7 +68,7 @@ angular.module('starter.services', [])
 
       loadMore: loadMore,
 
-      getPremio: function(premioId) {
+     /* getPremio: function(premioId) {
         for (var i = 0; i < dest.length; i++) {
           if (dest[i].id === parseInt(premioId)) {
             return dest[i];
@@ -80,7 +80,7 @@ angular.module('starter.services', [])
           }
         }
         return null;
-      },
+      },*/
 
       incrementCount:function(){
         countP++;

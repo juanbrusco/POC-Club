@@ -4,22 +4,22 @@
     <span class="text-primary text-uppercase">DESTACADOS</span>
     <ion-list>
       <div class="list">
-        <div class="item row" ng-click="showPopup(destacado.id)" ng-repeat="destacado in destacados">
+        <div class="item row" ng-click="showPopup(pDestacado.id)" ng-repeat="pDestacado in pDestacados">
           <div class="col col-33">
-            <img class="custom-img" ng-src="{{destacado.image}}"/>
+            <img class="custom-img" ng-src="{{pDestacado.image}}"/>
             <div class="custom-destacado">
               <p>Destacado</p>
             </div>
           </div>
           <div class="col col-33">
             <div class="content-middle">
-              <p class="title-premio item-middle">{{destacado.name}}</p>
+              <p class="title-premio item-middle">{{pDestacado.name}}</p>
             </div>
           </div>
           <div class="col col-33">
             <div class="content-middle" style="width: 100%;">
               <span class="item-middle">
-              <p class="puntos-premio">{{destacado.pointsValue}}&nbsp;Puntos</p>
+              <p class="puntos-premio">{{pDestacado.pointsValue}}&nbsp;Puntos</p>
               <p class="puntos-premio">+&nbsp;$ 500</p>
               </span>
             </div>
@@ -30,7 +30,7 @@
     <span class="text-primary text-uppercase">DESTACADOS</span>
     <ion-list>
       <div class="list">
-        <div class="item row" ng-click="showPopup(premio.id)" ng-repeat="premio in premios">
+        <div class="item row" ng-click="showPopup(premio.id)" ng-repeat="premio in pPremios">
           <div class="col col-33">
             <img class="custom-img" ng-src="{{premio.image}}"/>
           </div>

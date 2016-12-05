@@ -3,18 +3,18 @@
       <span class="text-primary text-uppercase">DESTACADOS</span>
       <ion-list>
        <div class="list">
-          <div class="item row" ng-click="showPopup(destacado.id)" ng-repeat="destacado in destacados" >
+          <div class="item row" ng-click="showPopupD(dDestacado.id)" ng-repeat="dDestacado in dDestacados" >
             <div class="col col-33">
-              <img class="custom-img" ng-src="{{destacado.logoProveedor}}"/>
+              <img class="custom-img" ng-src="{{dDestacado.logoProveedor}}"/>
               <div class="custom-destacado">
                 <p>Destacado</p>
               </div>
             </div>
             <div class="col col-33">
               <div class="content-middle">
-                <p class="title-premio item-middle">{{destacado.name}} <br>
-                <img alt="*" src="img/ico-phonito.png"><span class="title-premio"> Enviá gratis </span>
-                <span class="text-primary text-uppercase">{{destacado.keywordSMS}} </span><span class="title-premio">al </span><span class="text-primary">3372</span>
+                <p class="title-descuento item-middle">{{dDestacado.name}} <br>
+                <img alt="*" src="img/ico-phonito.png"><span class="title-descuento"> Enviá gratis </span>
+                <span class="text-primary text-uppercase">{{dDestacado.keywordSMS}} </span><span class="title-descuento">al </span><span class="text-primary">3372</span>
                 </p>
               </div>
             </div>
@@ -36,15 +36,15 @@
       <span class="text-primary text-uppercase">CATALOGO COMPLETO</span>
       <ion-list>
         <div class="list">
-          <div class="item row" ng-click="showPopup(descuento.id)" ng-repeat="descuento in descuentos" >
+          <div class="item row" ng-click="showPopupD(descuento.id)" ng-repeat="descuento in dDescuentos" >
             <div class="col col-33">
               <img class="custom-img" ng-src="{{descuento.logoProveedor}}"/>
             </div>
             <div class="col col-33">
               <div class="content-middle">
-                <p class="title-premio item-middle">{{descuento.name}} <br>
+                <p class="title-descuento item-middle">{{descuento.name}} <br>
                   <img alt="*" src="img/ico-phonito.png"><span class="title-premio"> Enviá gratis </span>
-                  <span class="title-premio">{{descuento.keywordSMS}} </span><span class="title-premio">al </span><span class="text-primary">3372</span>
+                  <span class="text-primary">{{descuento.keywordSMS}} </span><span class="title-descuento">al </span><span class="text-primary">3372</span>
                 </p>
               </div>
             </div>
@@ -65,7 +65,7 @@
         </div>
       </ion-list>
       <ion-infinite-scroll
-        on-infinite="loadMore()"
+        on-infinite="loadMoreD()"
         distance="1%">
       </ion-infinite-scroll>
     </ion-content>

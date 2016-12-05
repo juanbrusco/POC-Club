@@ -1,25 +1,38 @@
 angular.module('descuentos.controller', [])
   .controller('DescuentosCtrl', function($scope,$ionicPopup,Descuentos,$state) {
-    $scope.descuentos = [];
+    $scope.dDescuentos = [];
     Descuentos.destacados().then(function(data){
-      $scope.destacados = data
+      $scope.dDestacados = data
     });
 
-    $scope.loadMore =function() {
+    $scope.loadMoreD =function() {
       Descuentos.loadMore().then(function(data){
-        [].push.apply($scope.descuentos, data);
+        [].push.apply($scope.dDescuentos, data);
         Descuentos.incrementCount();
         $scope.$broadcast('scroll.infiniteScrollComplete');
       });
     };
 
     $scope.$on('$stateChangeSuccess', function() {
-      $scope.loadMore();
+      $scope.loadMoreD();
     });
 
+    getDescuento= function(descuentoId) {
+      for (var i = 0; i < $scope.dDestacados.length; i++) {
+        if ($scope.dDestacados[i].id === parseInt(descuentoId)) {
+          return $scope.dDestacados[i];
+        }
+      }
+      for (var j = 0; j < $scope.dDescuentos.length; j++) {
+        if ($scope.dDescuentos[j].id === parseInt(descuentoId)) {
+          return $scope.dDescuentos[j];
+        }
+      }
+      return null;
+    },
     // PopUp custom
-    $scope.showPopup = function(descuentoId) {
-      var descuento = Descuentos.getDescuento(descuentoId);
+    $scope.showPopupD = function(descuentoId) {
+      var descuento = getDescuento(descuentoId);
       // An elaborate, custom popup
       var myPopup = $ionicPopup.show({
         template: '<img ng-src="' + descuento.logoProveedor + '" style="width: 60px; height: 40px;"/>',
