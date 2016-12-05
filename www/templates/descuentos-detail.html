@@ -1,11 +1,13 @@
 
-<ion-view view-title="{{descuento.name}}">
-  <ion-content class="padding">
-    <img ng-src="{{descuento.logoProveedor}}" style="width: 100%; height: 40%">
-    <p>
-      {{descuento.name}}
-    </p>
-    <div id="map" data-tap-disabled="true"></div>
+<ion-view class="detail-background" view-title="{{descuentoDetail.name}}">
+  <ion-content>
+    <div>
+      <img ng-src="{{descuentoDetail.image}}" class="custom-img"/>
+      <p>
+        {{descuentoDetail.description}}
+      </p>
+      <div id="map" data-tap-disabled="true"></div>
+    </div>
   </ion-content>
 </ion-view>
 

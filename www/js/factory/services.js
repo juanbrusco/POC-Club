@@ -1,7 +1,7 @@
 angular.module('starter.services', [])
 
   .factory('Descuentos', function($http) {
-    var dest, more = [];
+    var dest, more,detail = [];
     var countD = 1;
     var getDesDestacados = function() {
       return $http.get("https://club.personal.com.ar/club/services/catalog/benefits/distinguished")
@@ -18,22 +18,21 @@ angular.module('starter.services', [])
           return more;
         });
     }
+
+    var getDescuento = function() {
+      return $http.get("https://club.personal.com.ar/club/services/catalog/benefits/7634")
+        .then(function(response) {
+          detail = response.data;
+          return detail;
+        });
+    }
+
+
+
     return {
       destacados: getDesDestacados,
 
-     /* getDescuento: function(descuentoId) {
-        for (var i = 0; i < dest.length; i++) {
-          if (dest[i].id === parseInt(descuentoId)) {
-            return dest[i];
-          }
-        }
-        for (var j = 0; j < more.length; j++) {
-          if (more[j].id === parseInt(descuentoId)) {
-            return more[j];
-          }
-        }
-        return null;
-      },*/
+      getDescuento: getDescuento,
 
       loadMore: loadMore,
 
