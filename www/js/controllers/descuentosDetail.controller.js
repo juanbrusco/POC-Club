@@ -3,9 +3,9 @@ angular.module('descuentosDetail.controller', [])
     $scope.descuento = Descuentos.getDescuento($stateParams.descuentoId);
 
     ionic.Platform.ready(function(){
-     /* $ionicLoading.show({
+      $ionicLoading.show({
         template: '<ion-spinner icon="bubbles"></ion-spinner><br/>Acquiring location!'
-      });*/
+      });
 
       var posOptions = {
         enableHighAccuracy: true,
@@ -34,7 +34,7 @@ angular.module('descuentosDetail.controller', [])
 
         $scope.map = map;
 
-        // $ionicLoading.hide();
+        $ionicLoading.hide();
         google.maps.event.addListenerOnce($scope.map, 'idle', function(){
 
 

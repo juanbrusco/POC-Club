@@ -1,21 +1,34 @@
 angular.module('premios.controller', [])
   .controller('PremiosCtrl', function($scope, $ionicPopup, Premios) {
+    $scope.premios = [];
     $scope.settings = {
       enableFriends: true
     };
 
-    $scope.premios = Premios.allPremios();
+    Premios.destacados().then(function(data){
+      $scope.destacados = data
+    });
+
+    $scope.loadMore =function() {
+      Premios.loadMore().then(function(data){
+        [].push.apply($scope.premios, data);
+        Premios.incrementCount();
+        $scope.$broadcast('scroll.infiniteScrollComplete');
+      });
+    };
+
+    $scope.$on('$stateChangeSuccess', function() {
+      $scope.loadMore();
+    });
 
     // PopUp custom
     $scope.showPopup = function(premioId) {
       var premio = Premios.getPremio(premioId);
-      $scope.data = {};
-
       // An elaborate, custom popup
       var myPopup = $ionicPopup.show({
-        template: '<img ng-src="http://resources.personal.com.ar/images/test/Logo-Sushi.png" style="width: 60px; height: 40px;"/>',
+        template: '<img ng-src="' + premio.image + '" style="width: 60px; height: 40px;"/>',
         title: 'Canjear Premio',
-        subTitle: premio.puntos + ' Puntos + $' + premio.pesos,
+        subTitle: '30.000 Puntos + $500',
         scope: $scope,
         buttons: [
           { text: 'Cancelar',

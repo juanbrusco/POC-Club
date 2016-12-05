@@ -1,7 +1,7 @@
 angular.module('descuentos.controller', [])
   .controller('DescuentosCtrl', function($scope,$ionicPopup,Descuentos,$state) {
     $scope.descuentos = [];
-    Descuentos.all().then(function(data){
+    Descuentos.destacados().then(function(data){
       $scope.destacados = data
     });
 
@@ -20,8 +20,6 @@ angular.module('descuentos.controller', [])
     // PopUp custom
     $scope.showPopup = function(descuentoId) {
       var descuento = Descuentos.getDescuento(descuentoId);
-      $scope.data = {};
-
       // An elaborate, custom popup
       var myPopup = $ionicPopup.show({
         template: '<img ng-src="' + descuento.logoProveedor + '" style="width: 60px; height: 40px;"/>',

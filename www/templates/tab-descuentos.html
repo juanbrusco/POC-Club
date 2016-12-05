@@ -1,45 +1,66 @@
-<ion-view  view-title="<img  src='../img/clubIsoLogoTipo.png' class='logo-header'/>" ng-controller="DescuentosCtrl">
+<ion-view  cache-view="true" view-title="<img  src='../img/clubIsoLogoTipo.png' class='logo-header'/>" ng-controller="DescuentosCtrl">
     <ion-content >
       <span class="text-primary text-uppercase">DESTACADOS</span>
       <ion-list>
-        <div class="list">
-          <a class="item item-thumbnail-left" ng-click="showPopup(destacado.id)" ng-repeat="destacado in destacados" >
-            <img class="custom-img-card" ng-src="{{destacado.logoProveedor}}"/>
-            <!--if premio destacado-->
-            <div class="custom-destacado">
-              <p>Destacado</p>
+       <div class="list">
+          <div class="item row" ng-click="showPopup(destacado.id)" ng-repeat="destacado in destacados" >
+            <div class="col col-33">
+              <img class="custom-img" ng-src="{{destacado.logoProveedor}}"/>
+              <div class="custom-destacado">
+                <p>Destacado</p>
+              </div>
             </div>
-            <p class="title-descuento">{{destacado.name}}</p>
-            <img alt="*" src="../img/ico-phonito.png">
-            <span class="title-descuento">Enviá gratis </span><span class="text-primary text-uppercase">{{destacado.keywordSMS}} </span><span class="title-premio">al </span><span class="text-primary">3372</span>
-
-            <div class="custom-barra-descuentos">
-              <div class="category descuento1"></div>
-              <div class="category descuento2"></div>
-              <div class="category descuento3"></div>
-              <div class="category descuento4"></div>
+            <div class="col col-33">
+              <div class="content-middle">
+                <p class="title-premio item-middle">{{destacado.name}} <br>
+                <img alt="*" src="img/ico-phonito.png"><span class="title-premio"> Enviá gratis </span>
+                <span class="text-primary text-uppercase">{{destacado.keywordSMS}} </span><span class="title-premio">al </span><span class="text-primary">3372</span>
+                </p>
+              </div>
             </div>
-          </a>
-
+            <div class="col col-33">
+              <div class="content-middle" style="width: 100%;">
+            <span class="item-middle">
+              <div class="custom-barra-descuentos">
+              <div class="category descuento1"></div> <span class="title-premio"> 20%</span> <br>
+              <div class="category descuento2"></div> <span class="title-premio"> 20%</span> <br>
+              <div class="category descuento3"></div> <span class="title-premio"> 20%</span> <br>
+              <div class="category descuento4"></div> <span class="title-premio"> 20%</span> <br>
+            </div>
+            </span>
+              </div>
+            </div>
+          </div>
         </div>
-
       </ion-list>
       <span class="text-primary text-uppercase">CATALOGO COMPLETO</span>
       <ion-list>
         <div class="list">
-          <a class="item item-thumbnail-left" ng-click="showPopup(descuento.id)" ng-repeat="descuento in descuentos">
-            <img class="custom-img-card" ng-src="{{descuento.logoProveedor}}"/>
-            <p class="title-descuento">{{descuento.name}}</p>
-            <img alt="*" src="../img/ico-phonito.png">
-            <span class="title-descuento">Enviá gratis </span><span class="text-primary text-uppercase">{{descuento.keywordSMS}} </span><span class="title-premio">al </span><span class="text-primary">3372</span>
-
-            <div class="custom-barra-descuentos">
-              <div class="category descuento1"></div>
-              <div class="category descuento2"></div>
-              <div class="category descuento3"></div>
-              <div class="category descuento4"></div>
+          <div class="item row" ng-click="showPopup(descuento.id)" ng-repeat="descuento in descuentos" >
+            <div class="col col-33">
+              <img class="custom-img" ng-src="{{descuento.logoProveedor}}"/>
             </div>
-          </a>
+            <div class="col col-33">
+              <div class="content-middle">
+                <p class="title-premio item-middle">{{descuento.name}} <br>
+                  <img alt="*" src="img/ico-phonito.png"><span class="title-premio"> Enviá gratis </span>
+                  <span class="title-premio">{{descuento.keywordSMS}} </span><span class="title-premio">al </span><span class="text-primary">3372</span>
+                </p>
+              </div>
+            </div>
+            <div class="col col-33">
+              <div class="content-middle" style="width: 100%;">
+            <span class="content-middle">
+              <div class="custom-barra-descuentos">
+              <div class="category descuento1"></div> <span class="title-premio"> 20%</span> <br>
+              <div class="category descuento2"></div> <span class="title-premio"> 20%</span> <br>
+              <div class="category descuento3"></div> <span class="title-premio"> 20%</span> <br>
+              <div class="category descuento4"></div> <span class="title-premio"> 20%</span> <br>
+            </div>
+            </span>
+              </div>
+            </div>
+          </div>
 
         </div>
       </ion-list>
