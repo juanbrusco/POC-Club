@@ -1,13 +1,30 @@
-
-<ion-view class="detail-background" view-title="{{descuentoDetail.name}}">
+<ion-view class="detail-background"  view-title="{{descuentoDetail.name}}">
   <ion-content>
     <div>
-      <img ng-src="{{descuentoDetail.image}}" class="custom-img"/>
-      <p>
+      <img ng-src="{{multimedia.url}}" class="custom-img"/>
+      <p class="detail-description">
         {{descuentoDetail.description}}
       </p>
-      <div id="map" data-tap-disabled="true"></div>
+
+      <div class="custom-barra-detail-descuentos">
+        <div class="detailCategory descuento1">
+          <div class="descuento-segmento">BLACK</div>
+          <div class="descuento-cantidad">2x1</div>
+        </div>
+        <div class="detailCategory descuento2">
+          <div class="descuento-segmento">PLATINO</div>
+          <div class="descuento-cantidad">2x1</div>
+        </div>
+        <div class="detailCategory descuento3">
+          <div class="descuento-segmento">ORO</div>
+          <div class="descuento-cantidad">2x1</div>
+        </div>
+        <div class="detailCategory descuento4">
+          <div class="descuento-segmento">PLATA</div>
+          <div class="descuento-cantidad">2x1</div>
+        </div>
+      </div>
     </div>
+    <div id="map" data-tap-disabled="true"></div>
   </ion-content>
 </ion-view>
-

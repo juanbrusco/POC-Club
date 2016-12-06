@@ -23,6 +23,11 @@
   background-color: #11c1f3;
 }
 
+.detail-description {
+  font-size: 15px;
+  color: #fff;
+}
+
 .text-uppercase, .initialism {
   text-transform: uppercase;
 }
@@ -93,6 +98,44 @@
   background-position: center center;
   display: inline-block;
 }
+
+.custom-barra-detail-descuentos .detailCategory {
+  text-align: center;
+  padding-top: 17px;
+  width: 70px;
+  height: 70px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: inline-block;
+}
+
+.custom-barra-detail-descuentos .detailCategory.descuento1 {
+  background-image: url(../img/detail-barra-bg1.png);
+}
+
+.custom-barra-detail-descuentos .detailCategory.descuento2 {
+  background-image: url(../img/detail-barra-bg2.png);
+}
+
+.custom-barra-detail-descuentos .detailCategory.descuento3 {
+  background-image: url(../img/detail-barra-bg3.png);
+}
+
+.custom-barra-detail-descuentos .detailCategory.descuento4 {
+  background-image: url(../img/detail-barra-bg4.png);
+}
+
+.custom-barra-detail-descuentos .detailCategory .descuento-segmento {
+  font-weight: 700;
+  margin-bottom: 7px;
+  color: #fff;
+}
+
+.custom-barra-detail-descuentos .detailCategory .descuento-cantidad {
+  font-size: 15px;
+  color: #fff;
+}
+
 
 #map {
   height: 50%;
