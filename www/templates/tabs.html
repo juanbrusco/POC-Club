@@ -1,24 +1,91 @@
-<!-- Acá agregamos los tabs que querramos y los configuramos en el app.js -->
-<ion-tabs class="tabs-icon-top tabs-color-active-positive">
+<!--&lt;!&ndash; Acá agregamos los tabs que querramos y los configuramos en el app.js &ndash;&gt;-->
+<!--<ion-tabs class="tabs-icon-top tabs-color-active-positive">-->
 
-  <!-- Home Tab -->
-  <ion-tab title="Home" icon-off="home" icon-on="home" href="#/tab/home">
-    <ion-nav-view name="tab-home"></ion-nav-view>
-  </ion-tab>
+<!--&lt;!&ndash; Home Tab &ndash;&gt;-->
+<!--<ion-tab title="Home" icon-off="home" icon-on="home" href="#/tab/home">-->
+<!--<ion-nav-view name="tab-home"></ion-nav-view>-->
+<!--</ion-tab>-->
 
-  <!-- Cercanos Tab -->
-  <ion-tab title="Cercanos" icon-off="compass" icon-on="compass" href="#/tab/cercanos">
-    <ion-nav-view name="tab-cercanos"></ion-nav-view>
-  </ion-tab>
+<!--&lt;!&ndash; Cercanos Tab &ndash;&gt;-->
+<!--<ion-tab title="Cercanos" icon-off="compass" icon-on="compass" href="#/tab/cercanos">-->
+<!--<ion-nav-view name="tab-cercanos"></ion-nav-view>-->
+<!--</ion-tab>-->
 
-  <!-- Descuentos Tab -->
-  <ion-tab title="Descuentos" icon-off="benefit activated" icon-on="benefit" href="#/tab/descuentos">
-    <ion-nav-view name="tab-descuentos"></ion-nav-view>
-  </ion-tab>
+<!--&lt;!&ndash; Descuentos Tab &ndash;&gt;-->
+<!--<ion-tab title="Descuentos" icon-off="benefit activated" icon-on="benefit" href="#/tab/descuentos">-->
+<!--<ion-nav-view name="tab-descuentos"></ion-nav-view>-->
+<!--</ion-tab>-->
 
-  <!-- Premios Tab -->
-  <ion-tab title="Premios" icon-off="gif" icon-on="gif" href="#/tab/premios">
-    <ion-nav-view name="tab-premios"></ion-nav-view>
-  </ion-tab>
+<!--&lt;!&ndash; Premios Tab &ndash;&gt;-->
+<!--<ion-tab title="Premios" icon-off="gif" icon-on="gif" href="#/tab/premios">-->
+<!--<ion-nav-view name="tab-premios"></ion-nav-view>-->
+<!--</ion-tab>-->
 
-</ion-tabs>
+<!--</ion-tabs>-->
+
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-positive">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+
+    <!-- TABS -->
+    <ion-tabs class="tabs-icon-top tabs-color-active-positive">
+
+      <!-- Home Tab -->
+      <ion-tab title="Home" icon-off="home" icon-on="home" href="#/tab/home">
+        <ion-nav-view name="tab-home"></ion-nav-view>
+      </ion-tab>
+
+      <!-- Cercanos Tab -->
+      <ion-tab title="Cercanos" icon-off="compass" icon-on="compass" href="#/tab/cercanos">
+        <ion-nav-view name="tab-cercanos"></ion-nav-view>
+      </ion-tab>
+
+      <!-- Descuentos Tab -->
+      <ion-tab title="Descuentos" icon-off="benefit activated" icon-on="benefit" href="#/tab/descuentos">
+        <ion-nav-view name="tab-descuentos"></ion-nav-view>
+      </ion-tab>
+
+      <!-- Premios Tab -->
+      <ion-tab title="Premios" icon-off="gif" icon-on="gif" href="#/tab/premios">
+        <ion-nav-view name="tab-premios"></ion-nav-view>
+      </ion-tab>
+
+    </ion-tabs>
+
+  </ion-side-menu-content>
+
+  <!-- Side Menu (left) -->
+  <ion-side-menu side="left">
+    <ion-header-bar class="bar-positive">
+      <h1 class="title">Usuario/Línea</h1>
+    </ion-header-bar>
+    <ion-content>
+      <div class="list custom-side-menu">
+        <a class="item item-icon-left custom-item-side" href="#">
+          <i class="icon"><img class="icon-slide" src="img/login.png"></i>
+          Login
+        </a>
+        <a class="item item-icon-left custom-item-side" href="#">
+          <i class="icon"><img class="icon-slide" src="img/logout.png"></i>
+          Logout
+        </a>
+        <a class="item item-icon-left custom-item-side" href="#">
+          <i class="icon"><img class="icon-slide" src="img/user.png"></i>
+          Mis datos
+        </a>
+        <a class="item item-icon-left custom-item-side" href="#">
+          <i class="icon"><img class="icon-slide" src="img/info.png"></i>
+          Acerca de...
+        </a>
+      </div>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

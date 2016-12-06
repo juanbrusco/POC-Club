@@ -33,7 +33,7 @@
 }
 
 @media (max-width: 363px){
-  .item{
+  .custom-item{
     height: 122px !important;
   }
 }
@@ -144,4 +144,18 @@
 
 scroll {
   height: 100%;
+}
+
+.custom-title-list{
+  width: 100%;
+  height: auto;
+  background-color: #d9186b;
+}
+.custom-title-list p{
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Platform-Light";
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 0px !important;
 }
