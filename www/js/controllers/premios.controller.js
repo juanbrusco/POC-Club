@@ -1,5 +1,5 @@
 angular.module('premios.controller', [])
-  .controller('PremiosCtrl', function($scope, $ionicPopup, Premios) {
+  .controller('PremiosCtrl', function($scope, $ionicPopup, Premios, $state) {
     $scope.pPremios = [];
     $scope.settings = {
       enableFriends: true
@@ -21,7 +21,7 @@ angular.module('premios.controller', [])
       $scope.loadMore();
     });
 
-    getPremio= function(premioId) {
+    getPremio = function(premioId) {
       for (var i = 0; i < $scope.pDestacados.length; i++) {
         if ($scope.pDestacados[i].id === parseInt(premioId)) {
           return $scope.pDestacados[i];
@@ -34,6 +34,12 @@ angular.module('premios.controller', [])
       }
       return null;
     },
+
+    $scope.getDetailPremio = function (id) {
+      $state.go('tab.premios-detail', {'premioId': id});
+    };
+
+
     // PopUp custom
     $scope.showPopup = function(premioId) {
       var premio = getPremio(premioId);
@@ -41,7 +47,7 @@ angular.module('premios.controller', [])
       var myPopup = $ionicPopup.show({
         template: '<img ng-src="' + premio.image + '" style="width: 60px; height: 40px;"/>',
         title: 'Canjear Premio',
-        subTitle: '30.000 Puntos + $500',
+        subTitle: premio.pointsValue + " Puntos",
         scope: $scope,
         buttons: [
           { text: 'Cancelar',
@@ -59,20 +65,4 @@ angular.module('premios.controller', [])
 
     };
 
-    // A confirm dialog
-    $scope.showConfirm = function(premioId) {
-      var premio = Premios.getPremio(premioId);
-      var confirmPopup = $ionicPopup.confirm({
-        title:'Canjear',
-        template: premio.desc
-      });
-
-      confirmPopup.then(function(res) {
-        if(res) {
-          console.log('You are sure');
-        } else {
-          console.log('You are not sure');
-        }
-      });
-    };
   });

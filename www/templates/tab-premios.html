@@ -6,7 +6,7 @@
     </div>
     <ion-list>
       <div class="list">
-        <div class="item row custom-item" ng-click="showPopup(pDestacado.id)" ng-repeat="pDestacado in pDestacados">
+        <div class="item row custom-item" ng-click="getDetailPremio(pDestacado.id)" ng-repeat="pDestacado in pDestacados">
           <div class="col col-33">
             <img class="custom-img" ng-src="{{pDestacado.image}}"/>
             <div class="custom-destacado">
@@ -22,7 +22,6 @@
             <div class="content-middle" style="width: 100%;">
               <span class="item-middle">
               <p class="puntos-premio">{{pDestacado.pointsValue}}&nbsp;Puntos</p>
-              <p class="puntos-premio">+&nbsp;$ 500</p>
               </span>
             </div>
           </div>
@@ -34,7 +33,7 @@
     </div>
     <ion-list>
       <div class="list">
-        <div class="item row custom-item" ng-click="showPopup(premio.id)" ng-repeat="premio in pPremios">
+        <div class="item row custom-item" ng-click="getDetailPremio(premio.id)" ng-repeat="premio in pPremios">
           <div class="col col-33">
             <img class="custom-img" ng-src="{{premio.image}}"/>
           </div>
@@ -47,7 +46,6 @@
             <div class="content-middle" style="width: 100%;">
               <span class="item-middle">
               <p class="puntos-premio">{{premio.pointsValue}}&nbsp;Puntos</p>
-              <p class="puntos-premio">+&nbsp;$ 500</p>
               </span>
             </div>
           </div>

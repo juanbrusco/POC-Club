@@ -60,12 +60,22 @@ angular.module('starter.services', [])
           return more;
         });
     }
+    var getPremioDetail = function(premioId) {
+      return $http.get("https://club.personal.com.ar/club/services/catalog/rewards/" + premioId)
+        .then(function(response) {
+          detail = response.data;
+          // console.log('Detail' + JSON.stringify(detail) + "" + response.status);
+          return detail;
+        });
+    }
 
     return {
 
       destacados: getPremiosDestacados,
 
       loadMore: loadMore,
+
+      getPremioDetail: getPremioDetail,
 
      /* getPremio: function(premioId) {
         for (var i = 0; i < dest.length; i++) {

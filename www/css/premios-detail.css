@@ -1,0 +1,27 @@
+.container-description-premio-detail {
+  font-size: 16px;
+  line-height: 16px;
+  height: 32px;
+  overflow: hidden;
+}
+.showPremioDescription {
+  overflow: visible;
+  height: auto;
+}
+
+.text-wrap-premio-detail {
+  overflow: visible !important;
+  white-space: normal !important;
+}
+
+.text-cyan-premio-detail{
+  color: #00b4c5;
+}
+
+.text-magenta-premio-detail{
+  color: #d9186b;
+}
+
+.width-100{
+  width: 100%;
+}

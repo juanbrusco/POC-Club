@@ -11,6 +11,7 @@ angular.module('clubApp', ['ionic',
                            'descuentos.controller',
                            'premios.controller',
                            'descuentosDetail.controller',
+                           'premiosDetail.controller',
                            'starter.services'])
 
 .run(function($ionicPlatform) {
@@ -93,7 +94,17 @@ angular.module('clubApp', ['ionic',
         controller: 'PremiosCtrl'
       }
     }
-  });
+  })
+    .state('tab.premios-detail', {
+      url: '/premios/detail',
+      views: {
+        'tab-premios': {
+          templateUrl: 'templates/premios-detail.html',
+          controller: 'PremiosDetailCtrl'
+        }
+      },
+      params: {'premioId': null}
+    });
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/tab/home');
