@@ -1,9 +1,11 @@
 <ion-view  cache-view="true" view-title="<img  src='../img/clubIsoLogoTipo.png' class='logo-header'/>" ng-controller="DescuentosCtrl">
     <ion-content >
-      <span class="text-primary text-uppercase">DESTACADOS</span>
+      <div class="custom-title-list">
+        <p>DESTACADOS</p>
+      </div>
       <ion-list>
        <div class="list">
-          <div class="item row" ng-click="showPopupD(dDestacado.id)" ng-repeat="dDestacado in dDestacados" >
+          <div class="item row custom-item" ng-click="showPopupD(dDestacado.id)" ng-repeat="dDestacado in dDestacados" >
             <div class="col col-33">
               <img class="custom-img" ng-src="{{dDestacado.logoProveedor}}"/>
               <div class="custom-destacado">
@@ -33,10 +35,12 @@
           </div>
         </div>
       </ion-list>
-      <span class="text-primary text-uppercase">CATALOGO COMPLETO</span>
+      <div class="custom-title-list">
+        <p>CATÁLOGO COMPLETO</p>
+      </div>
       <ion-list>
         <div class="list">
-          <div class="item row" ng-click="showPopupD(descuento.id)" ng-repeat="descuento in dDescuentos" >
+          <div class="item row custom-item" ng-click="showPopupD(descuento.id)" ng-repeat="descuento in dDescuentos" >
             <div class="col col-33">
               <img class="custom-img" ng-src="{{descuento.logoProveedor}}"/>
             </div>

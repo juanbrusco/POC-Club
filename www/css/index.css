@@ -18,7 +18,8 @@
   border: none;
   border-bottom: 1px solid #fff;
   padding-top: 2px;
-  font-family: "Lato-Regular";
+  /*font-family: "Lato-Regular";*/
+  font-family: "Platform-Regular";
 }
 
 ion-tabs.tabs-color-active-positive .tab-item {
@@ -77,15 +78,53 @@ ion-tabs.tabs-striped.tabs-color-active-positive .tab-item.tab-item-active, ion-
   font-family: "Platform-Regular";
 }
 
-@media screen and (orientation:landscape) {
+.icon-slide{
+  widht:50%;
+  height:50%;
+}
+
+@media (max-width: 400px) {
+  .logo-header{
+    width: 45%;
+  }
+}
+
+@media (min-width: 401px) and (max-width: 480px) {
+  .logo-header{
+    width: 30%;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 680px) {
   .logo-header{
     width: 20%;
   }
 }
 
-@media screen and (orientation:portrait) {
+@media (min-width: 681px) and (max-width: 770px) {
   .logo-header{
-    width: 35%;
+    width: 18%;
   }
 }
+
+@media (min-width: 771px) and (max-width: 980px) {
+  .logo-header{
+    width: 14%;
+  }
+}
+
+@media (min-width: 981px){
+  .logo-header{
+    width: 12%;
+  }
+}
+
+.custom-side-menu{
+  font-family: "Platform-Regular";
+}
+/*@media screen and (orientation:portrait) {*/
+  /*.logo-header{*/
+    /*width: 35%;*/
+  /*}*/
+/*}*/
 

@@ -1,10 +1,12 @@
 <!--https://github.com/DarrylD/ionic-ripple-->
 <ion-view view-title="<img  src='../img/clubIsoLogoTipo.png' class='logo-header'/>">
   <ion-content ng-controller="PremiosCtrl">
-    <span class="text-primary text-uppercase">DESTACADOS</span>
+    <div class="custom-title-list">
+      <p>DESTACADOS</p>
+    </div>
     <ion-list>
       <div class="list">
-        <div class="item row" ng-click="showPopup(pDestacado.id)" ng-repeat="pDestacado in pDestacados">
+        <div class="item row custom-item" ng-click="showPopup(pDestacado.id)" ng-repeat="pDestacado in pDestacados">
           <div class="col col-33">
             <img class="custom-img" ng-src="{{pDestacado.image}}"/>
             <div class="custom-destacado">
@@ -27,10 +29,12 @@
         </div>
       </div>
     </ion-list>
-    <span class="text-primary text-uppercase">DESTACADOS</span>
+    <div class="custom-title-list">
+      <p>CATÁLOGO COMPLETO</p>
+    </div>
     <ion-list>
       <div class="list">
-        <div class="item row" ng-click="showPopup(premio.id)" ng-repeat="premio in pPremios">
+        <div class="item row custom-item" ng-click="showPopup(premio.id)" ng-repeat="premio in pPremios">
           <div class="col col-33">
             <img class="custom-img" ng-src="{{premio.image}}"/>
           </div>
