@@ -1,10 +1,10 @@
-<ion-view view-title="{{premioDetail.name}}">
+<ion-view view-title="Detalle de Premio">
   <ion-content class="padding" ng-controller="PremiosDetailCtrl">
     <div class="premio-header">
       <div class="item item-avatar">
         <img ng-src="{{premioDetail.image}}">
-        <h2 class="item-middle text-left text-wrap-premio-detail">{{premioDetail.name}}
-          <br><span class="text-cyan-premio-detail">{{premioDetail.pointsValue}}&nbsp;Puntos</span>
+        <h2 class="item-middle text-left text-wrap">{{premioDetail.name}}
+          <br><span class="text-cyan">{{premioDetail.pointsValue}}&nbsp;Puntos</span>
         </h2>
         <!--<h2>{{premioDetail.name}}</h2>-->
       </div>
@@ -16,17 +16,17 @@
         <div class="container-description-premio-detail" ng-class="{showPremioDescription: showPremioDescription}">
           <p>{{premioDetail.description}}</p>
         </div>
-        <label ng-click="showPremioDescription = true" class="text-magenta-premio-detail">Ver más</label>
+        <label ng-click="showPremioDescription = true" class="text-magenta">Ver más</label>
         <div class="padding-top-10 padding-bottom-10">
           <!--<p><span class="padding-right-10"><img src="../img/icon-calendar-cyan.png"></span>Vigencia:&nbsp;{{premioDetail.startDate}}&nbsp;al&nbsp;{{premioDetail.expirationDate}}</p>-->
           <!--<p><span class="padding-right-10"><img src="../img/icon-location-cyan.png"></span>Origen:&nbsp;{{premioDetail.country}}</p>-->
           <!--<p><span class="padding-right-10"><img src="../img/icon-garantia-cyan.png"></span>Garantía:&nbsp;{{premioDetail.guarantee}}</p>-->
           <!--<p><span class="padding-right-10"><img src="../img/icon-text-info-cyan.png"></span>Entrega:&nbsp;{{premioDetail.delivery}}</p>-->
           <!--<p><span class="padding-right-10"><img src="../img/icon-text-success.png"></span>Efectivización inmediata</p>-->
-          <p><span class="text-cyan-premio-detail">Vigencia:</span>&nbsp;{{premioDetail.startDate}}&nbsp;al&nbsp;{{premioDetail.expirationDate}}</p>
-          <p><span class="text-cyan-premio-detail">Origen:</span>&nbsp;{{premioDetail.country}}</p>
-          <p><span class="text-cyan-premio-detail">Garantía:</span>&nbsp;{{premioDetail.guarantee}}</p>
-          <p><span class="text-cyan-premio-detail">Entrega:</span>&nbsp;{{premioDetail.delivery}}</p>
+          <p><span class="text-cyan">Vigencia:</span>&nbsp;{{premioDetail.startDate}}&nbsp;al&nbsp;{{premioDetail.expirationDate}}</p>
+          <p><span class="text-cyan">Origen:</span>&nbsp;{{premioDetail.country}}</p>
+          <p><span class="text-cyan">Garantía:</span>&nbsp;{{premioDetail.guarantee}}</p>
+          <p><span class="text-cyan">Entrega:</span>&nbsp;{{premioDetail.delivery}}</p>
           <p><span class="padding-right-10"><img src="../img/icon-text-success.png"></span>Efectivización inmediata</p>
         </div>
       </div>

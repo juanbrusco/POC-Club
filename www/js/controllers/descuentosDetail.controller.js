@@ -10,9 +10,9 @@ angular.module('descuentosDetail.controller', [])
     });
 
     ionic.Platform.ready(function(){
-      $ionicLoading.show({
-        template: '<ion-spinner icon="bubbles"></ion-spinner><br/>Acquiring location!'
-      });
+      // $ionicLoading.show({
+      //   template: '<ion-spinner icon="bubbles"></ion-spinner><br/>Acquiring location!'
+      // });
 
       var posOptions = {
         enableHighAccuracy: true,

@@ -1,11 +1,12 @@
-.container-description-premio-detail {
+.container-description-descuento-detail {
   font-size: 16px;
   line-height: 16px;
   height: 32px;
   overflow: hidden;
 }
-.showPremioDescription {
+.showDescuentoDescription {
   overflow: visible;
   height: auto;
 }
+
 

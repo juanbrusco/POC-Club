@@ -931,3 +931,19 @@
   stroke: #d9186b;
 }
 
+.text-wrap {
+  overflow: visible !important;
+  white-space: normal !important;
+}
+
+.text-cyan{
+  color: #00b4c5;
+}
+
+.text-magenta{
+  color: #d9186b;
+}
+
+.width-100{
+  width: 100%;
+}
