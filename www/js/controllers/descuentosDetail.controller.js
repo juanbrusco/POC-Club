@@ -1,5 +1,5 @@
 angular.module('descuentosDetail.controller', [])
-  .controller('DescuentosDetailCtrl', function($scope, $stateParams, Descuentos, $cordovaGeolocation, $ionicLoading) {
+  .controller('DescuentosDetailCtrl', function($scope, $stateParams, Descuentos, $cordovaGeolocation, $ionicLoading, $cordovaSms) {
 
     Descuentos.getDescuento().then(function(data){
       $scope.descuentoDetail = data
@@ -8,6 +8,19 @@ angular.module('descuentosDetail.controller', [])
     Descuentos.getMultimedia().then(function(data){
       $scope.multimedia = data
     });
+
+    $scope.sendSMS = function() {
+
+      $cordovaSms
+        .send('0959052082', 'This is some dummy text')
+        .then(function() {
+          alert('Success');
+          // Success! SMS was sent
+        }, function(error) {
+          alert('Error');
+          // An error occurred
+        });
+    }
 
     ionic.Platform.ready(function(){
       // $ionicLoading.show({

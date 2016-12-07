@@ -6,11 +6,7 @@
         <h2 class="item-middle text-left text-wrap">{{premioDetail.name}}
           <br><span class="text-cyan">{{premioDetail.pointsValue}}&nbsp;Puntos</span>
         </h2>
-        <!--<h2>{{premioDetail.name}}</h2>-->
       </div>
-      <!--<div class="item item-image">-->
-      <!--<img ng-src="{{premioDetail.image}}">-->
-      <!--</div>-->
       <div class="item item-body">
         <img class="full-image" ng-src="{{premioDetail.image}}">
         <div class="container-description-premio-detail" ng-class="{showPremioDescription: showPremioDescription}">
@@ -27,6 +23,10 @@
           <p><span class="text-cyan">Origen:</span>&nbsp;{{premioDetail.country}}</p>
           <p><span class="text-cyan">Garantía:</span>&nbsp;{{premioDetail.guarantee}}</p>
           <p><span class="text-cyan">Entrega:</span>&nbsp;{{premioDetail.delivery}}</p>
+          <div class="container-description-premio-legales" ng-class="{showPremioLegales: showPremioLegales}">
+            <p class="text-wrap"><span class="text-cyan">Legales:</span>&nbsp;{{premioDetail.legales}}</p>
+          </div>
+          <label ng-click="showPremioLegales = true" class="text-magenta">Ver más</label>
           <p><span class="padding-right-10"><img src="../img/icon-text-success.png"></span>Efectivización inmediata</p>
         </div>
       </div>
@@ -35,14 +35,18 @@
     </div>
     <div class="premio-canje">
       <div class="list">
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">eMail</span>
+          <input type="text" placeholder="Email donde recibirás el detalle del canje">
+        </label>
 
         <label class="item item-input item-stacked-label">
-          <span class="input-label">Información para el canje</span>
-          <textarea name="info" cols="40" rows="5"></textarea>
+          <span class="input-label">Puntos a descontar de la Línea 15555555</span>
+          <input type="number" placeholder="Puntos">
         </label>
         <label class="item item-input item-stacked-label">
-          <span class="input-label">N° de Línea 15555555</span>
-          <input type="number" placeholder="Puntos a descontar">
+          <span class="input-label">Información para el canje</span>
+          <textarea name="info" cols="40" rows="5" placeholder="Información que creas necesaria detallar"></textarea>
         </label>
       </div>
     </div>

@@ -8,5 +8,16 @@
   overflow: visible;
   height: auto;
 }
-
-
+.container-description-descuento-legales {
+  font-size: 16px;
+  line-height: 16px;
+  height: 32px;
+  overflow: hidden;
+}
+.container-description-descuento-legales p{
+  margin-top: 0px;
+}
+.showDescuentoLegales {
+  overflow: visible;
+  height: auto;
+}

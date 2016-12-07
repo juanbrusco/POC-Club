@@ -4,15 +4,11 @@
       <div class="item item-avatar">
         <img ng-src="{{descuentoDetail.image}}">
         <h2 class="item-middle text-left text-wrap">{{descuentoDetail.name}}
-          <br><span class="text-cyan">{{descuentoDetail.applyingDays}}</span></h2>
+          <br><span class="text-cyan">{{descuentoDetail.applyingDays[1]}}</span></h2>
       </div>
       <div class="item item-body">
         <img class="full-image" ng-src="{{multimedia.url}}">
-        <div class="container-description-descuento-detail"
-             ng-class="{showDescuentoDescription: showDescuentoDescription}">
-          <p>{{descuentoDetail.description}}</p>
-        </div>
-        <label ng-click="showDescuentoDescription = true" class="text-magenta">Ver más</label>
+        <p>{{descuentoDetail.description}}</p>
         <div class="padding-top-10 padding-bottom-10">
           <div class="custom-barra-detail-descuentos text-center">
             <div class="detailCategory descuento1">
@@ -32,22 +28,45 @@
               <div class="descuento-cantidad">2x1</div>
             </div>
           </div>
-          <p><span class="text-cyan">Vigencia:</span>&nbsp;{{descuentoDetail.startDate}}&nbsp;al&nbsp;{{descuentoDetail.expirationDate}}
+          <p class="text-wrap"><span class="text-cyan">Vigencia:</span>&nbsp;{{descuentoDetail.startDate}}&nbsp;al&nbsp;{{descuentoDetail.expirationDate}}
           </p>
-          <p><span class="text-cyan">Web:</span>&nbsp;{{descuentoDetail.link}}</p>
-          <p><span class="padding-right-10"><img src="../img/icon-text-success.png"></span>Recibe el código por SMS.</p>
+          <p class="text-wrap"><span class="text-cyan">Web:</span>&nbsp;{{descuentoDetail.link}}</p>
+          <div class="container-description-descuento-legales" ng-class="{showDescuentoLegales: showDescuentoLegales}">
+            <p class="text-wrap"><span class="text-cyan">Legales:</span>&nbsp;{{descuentoDetail.legales}}</p>
+          </div>
+          <label ng-click="showDescuentoLegales = true" class="text-magenta">Ver más</label>
+          <p class="text-wrap"><span class="padding-right-10"><img src="../img/icon-text-success.png"></span>Recibe el
+            código por SMS.</p>
         </div>
       </div>
     </div>
     <div class="descuento-detail">
-      <div id="map" data-tap-disabled="true"></div>
+      <div class="list list-descuentos-sucursales">
+        <div class="item item-divider text-cyan">
+          Sucursales
+        </div>
+        <a class="item" href="#">
+          Capital Federal, Las Cañitas - Baéz 268 0
+        </a>
+        <a class="item" href="#">
+          Cordoba, Las Cañitas - Baéz 268
+        </a>
+        <a class="item" href="#">
+          Santa Fé, Las Cañitas - Baéz 268
+        </a>
+        <!--<div class="item item-divider text-cyan">-->
+        <!--Legales-->
+        <!--</div>-->
+        <!--<p class="item text-left text-wrap">{{descuentoDetail.legales}}</p>-->
+      </div>
     </div>
-    <div class="descuento-canje">
-    </div>
+    <div id="map" data-tap-disabled="true"></div>
     <div class="descuento-footer padding-top-10 padding-bottom-10 width-100 text-center">
-        <img style="vertical-align:middle" class="icon-slide" src="img/icon-sms.png">
-        <span class="text-wrap">Enviá&nbsp;<span class="text-magenta">{{descuentoDetail.keywordSMS}}</span>
-          &nbsp;al&nbsp;<span class="text-magenta">{number}</span></span>
+      <button class="button button-positive width-100" ng-click="sendSMS()">
+        <img style="vertical-align:middle" class="icon-slide padding-5" src="img/icon-sms-white.png">
+        <span class="text-wrap">Enviá&nbsp;{{descuentoDetail.keywordSMS}}
+          &nbsp;al&nbsp;3372</span>
+      </button>
     </div>
   </ion-content>
 </ion-view>
