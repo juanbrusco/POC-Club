@@ -1,4 +1,4 @@
-angular.module('descuentosDetail.controller', [])
+angular.module('descuentosDetail.controller', ['ionic','ngCordova'])
   .controller('DescuentosDetailCtrl', function($scope, $stateParams, Descuentos, $cordovaGeolocation, $ionicLoading, $cordovaSms) {
 
     Descuentos.getDescuento().then(function(data){
@@ -9,18 +9,33 @@ angular.module('descuentosDetail.controller', [])
       $scope.multimedia = data
     });
 
-    $scope.sendSMS = function() {
+
+    // http://pointdeveloper.com/how-to-send-an-sms-with-ionic-framework-and-ngcorodva/
+    $scope.sms={};
+
+    var options = {
+      replaceLineBreaks: false, // true to replace \n by a new line, false by default
+      android: {
+        intent: 'INTENT'  // send SMS with the default SMS app
+        //intent: ''        // send SMS without open any other app
+      }};
+
+      $scope.sendSms=function(keyword,number){
+      console.log($scope.sms.number);
+      console.log($scope.sms.message);
 
       $cordovaSms
-        .send('0959052082', 'This is some dummy text')
+        .send(number, keyword, options)
         .then(function() {
-          alert('Success');
           // Success! SMS was sent
+          console.log('Success');
         }, function(error) {
-          alert('Error');
           // An error occurred
-        });
-    }
+          console.log(error);
+        });//then
+    };//sendSms
+
+
 
     ionic.Platform.ready(function(){
       /* $ionicLoading.show({

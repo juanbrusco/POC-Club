@@ -12,6 +12,9 @@
         },
         "cordova-sms-plugin": {
             "PACKAGE_NAME": "com.ionicframework.pocionic342713"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.ionicframework.pocionic"
         }
     },
     "dependent_plugins": {}
