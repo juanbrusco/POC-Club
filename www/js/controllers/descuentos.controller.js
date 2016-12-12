@@ -53,6 +53,9 @@ angular.module('descuentos.controller', [])
       });
     };
 
+    $scope.getDetailDescuento = function (id) {
+      $state.go('tab.descuentos-detail', {'descuentoId': id});
+    };
     // A confirm dialog
     $scope.showConfirm = function(descuentoId) {
       var descuento = Descuentos.getDescuento(descuentoId);

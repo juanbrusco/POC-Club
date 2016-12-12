@@ -23,9 +23,9 @@ angular.module('descuentosDetail.controller', [])
     }
 
     ionic.Platform.ready(function(){
-      // $ionicLoading.show({
-      //   template: '<ion-spinner icon="bubbles"></ion-spinner><br/>Acquiring location!'
-      // });
+      /* $ionicLoading.show({
+         template: '<ion-spinner icon="bubbles"></ion-spinner>'
+       });*/
 
       var posOptions = {
         enableHighAccuracy: true,
@@ -48,7 +48,7 @@ angular.module('descuentosDetail.controller', [])
 
         $scope.map = map;
 
-        $ionicLoading.hide();
+        // $ionicLoading.hide();
         google.maps.event.addListenerOnce($scope.map, 'idle', function(){
           var marker = new google.maps.Marker({
             map: $scope.map,

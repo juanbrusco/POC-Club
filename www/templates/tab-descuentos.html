@@ -5,7 +5,7 @@
       </div>
       <ion-list>
        <div class="list">
-          <div class="item row custom-item" ng-click="showPopupD(dDestacado.id)" ng-repeat="dDestacado in dDestacados" >
+          <div class="item row custom-item" ng-click="getDetailDescuento(dDestacado.id)" ng-repeat="dDestacado in dDestacados" >
             <div class="col col-33">
               <img class="custom-img" ng-src="{{dDestacado.logoProveedor}}"/>
               <div class="custom-destacado">
@@ -40,7 +40,7 @@
       </div>
       <ion-list>
         <div class="list">
-          <div class="item row custom-item" ng-click="showPopupD(descuento.id)" ng-repeat="descuento in dDescuentos" >
+          <div class="item row custom-item" ng-click="getDetailDescuento(descuento.id)" ng-repeat="descuento in dDescuentos" >
             <div class="col col-33">
               <img class="custom-img" ng-src="{{descuento.logoProveedor}}"/>
             </div>
