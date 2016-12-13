@@ -1,11 +1,11 @@
 angular.module('descuentosDetail.controller', ['ionic','ngCordova'])
   .controller('DescuentosDetailCtrl', function($scope, $stateParams, Descuentos, $cordovaGeolocation, $ionicLoading, $cordovaSms, $cordovaSocialSharing) {
 
-    Descuentos.getDescuento().then(function(data){
+    Descuentos.getDescuentoDetail($stateParams.descuentoId).then(function(data){
       $scope.descuentoDetail = data
     });
 
-    Descuentos.getMultimedia().then(function(data){
+    Descuentos.getMultimedia($stateParams.descuentoId).then(function(data){
       $scope.multimedia = data
     });
 
