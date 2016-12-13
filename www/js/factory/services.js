@@ -19,16 +19,16 @@ angular.module('starter.services', [])
         });
     }
 
-    var getDescuento = function() {
-      return $http.get("https://club.personal.com.ar/club/services/catalog/benefits/7634")
+    var getDescuentoDetail = function(descuentoId) {
+      return $http.get("https://club.personal.com.ar/club/services/catalog/benefits/" + descuentoId)
         .then(function(response) {
           detail = response.data;
           return detail;
         });
     }
 
-    var getMultimedia = function() {
-      return $http.get("https://club.personal.com.ar/club/services/catalog/benefits/7634/multimedia")
+    var getMultimedia = function(descuentoId) {
+      return $http.get("https://club.personal.com.ar/club/services/catalog/benefits/"+descuentoId+"/multimedia")
         .then(function(response) {
           multimedia = response.data;
           return multimedia[0];
@@ -38,7 +38,7 @@ angular.module('starter.services', [])
     return {
       destacados: getDesDestacados,
 
-      getDescuento: getDescuento,
+      getDescuentoDetail: getDescuentoDetail,
 
       getMultimedia: getMultimedia,
 
