@@ -15,15 +15,15 @@
   <allow-intent href="*"/>
   <allow-navigation href="*"/>
   <allow-navigation href="http://10.15.71.79:8100"/>
+  <allow-navigation href="http://10.15.71.104:8100"/>
   <preference name="webviewbounce" value="false"/>
   <preference name="UIWebViewBounce" value="false"/>
   <preference name="DisallowOverscroll" value="true"/>
-  <!--https://github.com/apache/cordova-plugin-splashscreen-->
   <preference name="FadeSplashScreenDuration" value="300"/>
   <preference name="android-minSdkVersion" value="16"/>
   <preference name="BackupWebStorage" value="none"/>
   <preference name="AutoHideSplashScreen" value="true"/>
-  <preference name="SplashShowOnlyFirstTime" value="false" />
+  <preference name="SplashShowOnlyFirstTime" value="false"/>
   <preference name="SplashScreen" value="screen"/>
   <preference name="SplashScreenDelay" value="3000"/>
   <preference name="ShowSplashScreenSpinner" value="false"/>
@@ -74,8 +74,10 @@
     <splash src="resources\ios\splash\Default-736h.png" width="1242" height="2208"/>
     <splash src="resources\ios\splash\Default-Landscape-736h.png" width="2208" height="1242"/>
     <splash src="resources\ios\splash\Default-Landscape@2x~ipad.png" width="2048" height="1536"/>
+    <splash src="resources\ios\splash\Default-Landscape@~ipadpro.png" width="2732" height="2048"/>
     <splash src="resources\ios\splash\Default-Landscape~ipad.png" width="1024" height="768"/>
     <splash src="resources\ios\splash\Default-Portrait@2x~ipad.png" width="1536" height="2048"/>
+    <splash src="resources\ios\splash\Default-Portrait@~ipadpro.png" width="2048" height="2732"/>
     <splash src="resources\ios\splash\Default-Portrait~ipad.png" width="768" height="1024"/>
     <splash src="resources\ios\splash\Default@2x~iphone.png" width="640" height="960"/>
     <splash src="resources\ios\splash\Default~iphone.png" width="320" height="480"/>
