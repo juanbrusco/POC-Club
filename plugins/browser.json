@@ -9,6 +9,9 @@
     "installed_plugins": {
         "cordova-sms-plugin": {
             "PACKAGE_NAME": "com.ionicframework.pocionic342713"
+        },
+        "cordova-plugin-x-socialsharing": {
+            "PACKAGE_NAME": "com.ionicframework.pocionic342713"
         }
     },
     "dependent_plugins": {}

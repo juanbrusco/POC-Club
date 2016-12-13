@@ -1,5 +1,5 @@
 angular.module('descuentosDetail.controller', ['ionic','ngCordova'])
-  .controller('DescuentosDetailCtrl', function($scope, $stateParams, Descuentos, $cordovaGeolocation, $ionicLoading, $cordovaSms) {
+  .controller('DescuentosDetailCtrl', function($scope, $stateParams, Descuentos, $cordovaGeolocation, $ionicLoading, $cordovaSms, $cordovaSocialSharing) {
 
     Descuentos.getDescuento().then(function(data){
       $scope.descuentoDetail = data
@@ -35,7 +35,16 @@ angular.module('descuentosDetail.controller', ['ionic','ngCordova'])
         });//then
     };//sendSms
 
-
+    //$cordovaSocialSharing.share("This is your message", "This is your subject", "www/imagefile.png", "https://www.thepolyglotdeveloper.com");
+    $scope.shareAnywhere = function(desc) {
+      $cordovaSocialSharing
+        .share("Estoy usando la aplicación móvil de Club Personal y me gustó el siguiente descuento:", desc,  "", "") // Share via native share sheet
+        .then(function(result) {
+          // Success!
+        }, function(err) {
+          // An error occured. Show a message to the user
+        });
+    }
 
     ionic.Platform.ready(function(){
       /* $ionicLoading.show({
