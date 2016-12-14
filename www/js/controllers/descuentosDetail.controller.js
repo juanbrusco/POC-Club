@@ -11,7 +11,7 @@ angular.module('descuentosDetail.controller', ['ionic','ngCordova'])
 
 
     // http://pointdeveloper.com/how-to-send-an-sms-with-ionic-framework-and-ngcorodva/
-    $scope.sms={};
+    //$scope.sms={};
 
     var options = {
       replaceLineBreaks: false, // true to replace \n by a new line, false by default
@@ -21,8 +21,9 @@ angular.module('descuentosDetail.controller', ['ionic','ngCordova'])
       }};
 
       $scope.sendSms=function(keyword,number){
-      console.log($scope.sms.number);
-      console.log($scope.sms.message);
+      //console.log($scope.sms.number);
+     // console.log($scope.sms.message);
+
 
       $cordovaSms
         .send(number, keyword, options)
@@ -38,13 +39,24 @@ angular.module('descuentosDetail.controller', ['ionic','ngCordova'])
     //$cordovaSocialSharing.share("This is your message", "This is your subject", "www/imagefile.png", "https://www.thepolyglotdeveloper.com");
     $scope.shareAnywhere = function(desc) {
       $cordovaSocialSharing
-        .share("Estoy usando la aplicación móvil de Club Personal y me gustó el siguiente descuento:", desc,  "", "") // Share via native share sheet
+        .share("", "Estoy usando la aplicación móvil de Club Personal y me gustó el siguiente descuento:" +desc,  "", "") // Share via native share sheet
         .then(function(result) {
           // Success!
         }, function(err) {
           // An error occured. Show a message to the user
         });
     }
+
+    $scope.shareSMS = function(keyword,number) {
+      $cordovaSocialSharing
+        .shareViaSMS(keyword, number)
+        .then(function(result) {
+          // Success!
+        }, function(err) {
+          // An error occurred. Show a message to the user
+        });
+    }
+
 
     ionic.Platform.ready(function(){
       /* $ionicLoading.show({
