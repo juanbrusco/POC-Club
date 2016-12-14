@@ -6,7 +6,7 @@
 - (void)send:(CDVInvokedUrlCommand*)command {
     [self.commandDelegate runInBackground:^{
         self.callbackID = command.callbackId;
-        
+
         if(![MFMessageComposeViewController canSendText]) {
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Notice"
                                                             message:@"SMS Text not available."
@@ -20,10 +20,10 @@
             });
             return;
         }
-        
+
         MFMessageComposeViewController *composeViewController = [[MFMessageComposeViewController alloc] init];
         composeViewController.messageComposeDelegate = self;
-        
+
         NSString* body = [command.arguments objectAtIndex:1];
         if (body != nil) {
             BOOL replaceLineBreaks = [[command.arguments objectAtIndex:3] boolValue];
@@ -32,13 +32,13 @@
             }
             [composeViewController setBody:body];
         }
-        
+
         NSMutableArray* recipients = [command.arguments objectAtIndex:0];
         if (recipients != nil) {
             if ([recipients.firstObject isEqual: @""]) {
                 [recipients replaceObjectAtIndex:0 withObject:@"?"];
             }
-            
+
             [composeViewController setRecipients:recipients];
         }
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -53,7 +53,7 @@
     // Notifies users about errors associated with the interface
     int webviewResult = 0;
     NSString* message = @"";
-    
+
     switch(result) {
         case MessageComposeResultCancelled:
             webviewResult = 0;
@@ -72,13 +72,13 @@
             message = @"Unknown error.";
             break;
     }
-    
-    [self.viewController dismissViewControllerAnimated:YES completion:nil];
-    
+
+    [self.viewController dismissViewControllerAnimated:NO completion:nil];
+
     if(webviewResult == 1) {
         CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK
                                                           messageAsString:message];
-        
+
         [self.commandDelegate sendPluginResult:pluginResult callbackId:self.callbackID];
     } else {
         CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR

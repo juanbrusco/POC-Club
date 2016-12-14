@@ -1,6 +1,7 @@
 <ion-view view-title="Detalle de Descuento">
   <ion-content class="padding" ng-controller="DescuentosDetailCtrl">
-    <button class="button" ng-click="shareAnywhere(descuentoDetail.description)">Share</button>
+
+    <button class="button" ng-click="shareAnywhere(descuentoDetail.description)">Shaaaare</button>
     <div class="descuento-header">
       <div class="item item-avatar">
         <img ng-src="{{descuentoDetail.image}}">
@@ -60,8 +61,6 @@
         <!--</div>-->
         <!--<p class="item text-left text-wrap">{{descuentoDetail.legales}}</p>-->
       </div>
-    </div>
-    <div style="height:100%; width:100%;">
       <div id="map" data-tap-disabled="true"></div>
     </div>
     <div class="descuento-footer padding-top-10 padding-bottom-10 width-100 text-center">
@@ -71,5 +70,7 @@
           &nbsp;al&nbsp;3372</span>
       </button>
     </div>
+
   </ion-content>
+
 </ion-view>

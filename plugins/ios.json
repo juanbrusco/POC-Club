@@ -7,12 +7,37 @@
         "files": {}
     },
     "installed_plugins": {
-        "cordova-sms-plugin": {
-            "PACKAGE_NAME": "com.ionicframework.pocionic342713"
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.ionicframework.pocclub"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.ionicframework.pocclub"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "com.ionicframework.pocclub"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.ionicframework.pocclub"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.ionicframework.pocclub"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.ionicframework.pocclub"
         },
         "cordova-plugin-x-socialsharing": {
-            "PACKAGE_NAME": "com.ionicframework.pocionic342713"
+            "PACKAGE_NAME": "com.ionicframework.pocclub"
+        },
+        "cordova-sms-plugin": {
+            "PACKAGE_NAME": "com.ionicframework.pocclub"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "com.ionicframework.pocclub"
         }
     },
-    "dependent_plugins": {}
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.ionicframework.pocclub"
+        }
+    }
 }

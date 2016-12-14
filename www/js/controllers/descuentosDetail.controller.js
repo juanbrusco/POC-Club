@@ -1,5 +1,5 @@
 angular.module('descuentosDetail.controller', ['ionic','ngCordova'])
-  .controller('DescuentosDetailCtrl', function($scope, $stateParams, Descuentos, $cordovaGeolocation, $ionicLoading, $cordovaSms, $cordovaSocialSharing) {
+  .controller('DescuentosDetailCtrl', function($scope, $stateParams, Descuentos, $cordovaGeolocation, $ionicLoading, $cordovaSms, $cordovaSocialSharing,$window) {
 
     Descuentos.getDescuentoDetail($stateParams.descuentoId).then(function(data){
       $scope.descuentoDetail = data
@@ -48,15 +48,8 @@ angular.module('descuentosDetail.controller', ['ionic','ngCordova'])
     }
 
     $scope.shareSMS = function(keyword,number) {
-      $cordovaSocialSharing
-        .shareViaSMS(keyword, number)
-        .then(function(result) {
-          // Success!
-        }, function(err) {
-          // An error occurred. Show a message to the user
-        });
+        $window.plugins.socialsharing.shareViaSMS(keyword,number.toString(), function(msg) {console.log('ok: ' + msg)}, function(msg) {alert('error: ' + msg)})
     }
-
 
     ionic.Platform.ready(function(){
       /* $ionicLoading.show({
