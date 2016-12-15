@@ -3,7 +3,8 @@ angular.module('home.controller', ['ui.swiper'])
   .controller('HomeCtrl', function($scope) {
 
     $scope.openWindow = function(data){
-      window.open(data,'_blank','location=no');
+      cordova.InAppBrowser.open(data, '_system', 'location=yes');
+      // window.open(data,'_system');
     };
     $scope.slides = [
       {

@@ -21,7 +21,8 @@
     "cordova-plugin-device",
     "cordova-plugin-splashscreen",
     "ionic-plugin-keyboard",
-    "cordova-sms-plugin"
+    "cordova-sms-plugin",
+    "cordova-plugin-inappbrowser"
   ],
   "cordovaPlatforms": []
 }
