@@ -951,3 +951,17 @@
 .swiper-pagination-bullet {
   background: #00b4c5;
 }
+
+.custom-title-list{
+  width: 100%;
+  height: auto;
+  /*background-color: #d9186b;*/
+}
+.custom-title-list p{
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Platform-Light";
+  font-size: 20px;
+  color: #d9186b;
+  margin-bottom: 0px !important;
+}

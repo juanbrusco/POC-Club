@@ -1,5 +1,5 @@
 angular.module('descuentosDetail.controller', ['ionic','ngCordova'])
-  .controller('DescuentosDetailCtrl', function($scope, $stateParams, Descuentos, $cordovaGeolocation, $ionicLoading, $cordovaSms, $cordovaSocialSharing,$window) {
+  .controller('DescuentosDetailCtrl', function($scope, $stateParams, Descuentos, $cordovaGeolocation, $ionicLoading, $cordovaSms, $cordovaSocialSharing,$ionicHistory, $rootScope, $cordovaKeyboard) {
 
     Descuentos.getDescuentoDetail($stateParams.descuentoId).then(function(data){
       $scope.descuentoDetail = data
@@ -9,32 +9,34 @@ angular.module('descuentosDetail.controller', ['ionic','ngCordova'])
       $scope.multimedia = data
     });
 
+    $rootScope.isDetalle=true;
+
 
     // http://pointdeveloper.com/how-to-send-an-sms-with-ionic-framework-and-ngcorodva/
-    //$scope.sms={};
+    //$scope.sms={};    ASDSAD
 
-    var options = {
-      replaceLineBreaks: false, // true to replace \n by a new line, false by default
-      android: {
-        intent: 'INTENT'  // send SMS with the default SMS app
-        //intent: ''        // send SMS without open any other app
-      }};
-
-      $scope.sendSms=function(keyword,number){
-      //console.log($scope.sms.number);
-     // console.log($scope.sms.message);
-
-
-      $cordovaSms
-        .send(number, keyword, options)
-        .then(function() {
-          // Success! SMS was sent
-          console.log('Success');
-        }, function(error) {
-          // An error occurred
-          console.log(error);
-        });//then
-    };//sendSms
+    // var options = {
+    //   replaceLineBreaks: false, // true to replace \n by a new line, false by default
+    //   android: {
+    //     intent: 'INTENT'  // send SMS with the default SMS app
+    //     //intent: ''        // send SMS without open any other app
+    //   }};
+    //
+    //   $scope.sendSms=function(keyword,number){
+    //   //console.log($scope.sms.number);
+    //  // console.log($scope.sms.message);
+    //
+    //
+    //   $cordovaSms
+    //     .send(number, keyword, options)
+    //     .then(function() {
+    //       // Success! SMS was sent
+    //       console.log('Success');
+    //     }, function(error) {
+    //       // An error occurred
+    //       console.log(error);
+    //     });//then
+    // };//sendSms
 
     //$cordovaSocialSharing.share("This is your message", "This is your subject", "www/imagefile.png", "https://www.thepolyglotdeveloper.com");
     $scope.shareAnywhere = function(desc) {
@@ -48,8 +50,12 @@ angular.module('descuentosDetail.controller', ['ionic','ngCordova'])
     }
 
     $scope.shareSMS = function(keyword,number) {
-        $window.plugins.socialsharing.shareViaSMS(keyword,number.toString(), function(msg) {console.log('ok: ' + msg)}, function(msg) {alert('error: ' + msg)})
+      window.plugins.socialsharing.shareViaSMS(keyword,number.toString(), function(msg) {console.log('ok: ' + msg)}, function(msg) {alert('error: ' + msg)})
     }
+
+    $scope.myGoBack = function() {
+      $ionicHistory.goBack();
+    };
 
     ionic.Platform.ready(function(){
       /* $ionicLoading.show({

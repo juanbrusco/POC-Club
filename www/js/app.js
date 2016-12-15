@@ -12,6 +12,7 @@ angular.module('clubApp', ['ionic',
                            'premios.controller',
                            'descuentosDetail.controller',
                            'premiosDetail.controller',
+                           'tabs.controller',
                            'starter.services'])
 
 .run(function($ionicPlatform) {
@@ -37,7 +38,8 @@ angular.module('clubApp', ['ionic',
     .state('tab', {
     url: '/tab',
     abstract: true,
-    templateUrl: 'templates/tabs.html'
+    templateUrl: 'templates/tabs.html',
+     controller: 'TabsCtrl'
   })
 
   /*

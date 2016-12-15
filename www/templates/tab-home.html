@@ -3,7 +3,7 @@
     <ion-content overflow-scroll="true">
       <ion-slides ng-if="true" options="options" slider="data.slider" style="height: 50%;">
         <ion-slide-page ng-repeat="slide in slides">
-          <img href="{{slide.link}}" ng-click="openWindow('{{slide.link}}')" ng-src={{slide.img}} onerror="this.src='img/no-image.png'" >
+          <img ng-click="openWindow('{{slide.link}}')" ng-src={{slide.img}} onerror="this.src='img/no-image.png'" >
         </ion-slide-page>
 
       </ion-slides>

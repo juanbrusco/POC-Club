@@ -21,7 +21,7 @@
   overflow: visible;
   height: auto;
 }
-/*.premio-footer{*/
-  /*position: fixed;*/
-  /*bottom: 2.8em;*/
-/*}*/
+.premio-footer{
+  position: fixed;
+  bottom: 0em;
+}

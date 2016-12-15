@@ -1,5 +1,5 @@
 angular.module('premios.controller', [])
-  .controller('PremiosCtrl', function($scope, $ionicPopup, Premios, $state) {
+  .controller('PremiosCtrl', function($scope, $ionicPopup, Premios, $state, $ionicTabsDelegate) {
     $scope.pPremios = [];
     $scope.settings = {
       enableFriends: true
@@ -36,6 +36,7 @@ angular.module('premios.controller', [])
     },
 
     $scope.getDetailPremio = function (id) {
+      $ionicTabsDelegate.showBar(false);
       $state.go('tab.premios-detail', {'premioId': id});
     };
 

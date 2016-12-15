@@ -21,3 +21,7 @@
   overflow: visible;
   height: auto;
 }
+.descuento-footer{
+  position: fixed;
+  bottom: 0em;
+}

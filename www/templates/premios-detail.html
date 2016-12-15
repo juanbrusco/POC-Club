@@ -1,4 +1,10 @@
-<ion-view view-title="Detalle de Premio">
+<ion-view can-swipe-back="false">
+  <ion-nav-title>
+    Detalle de Premio
+  </ion-nav-title>
+  <ion-nav-buttons side="right">
+    <a class="button button-icon icon ion-ios-upload-outline" ng-click=""></a>
+  </ion-nav-buttons>
   <ion-content class="padding" ng-controller="PremiosDetailCtrl">
     <div class="premio-header">
       <div class="item item-avatar">
@@ -50,10 +56,15 @@
         </label>
       </div>
     </div>
-    <div class="premio-footer padding-top-10 width-100">
-      <button class="button button-positive width-100">
-        Confirmar Canje
-      </button>
-    </div>
+    <br>
+    <br>
+    <br>
+    <br>
   </ion-content>
+  <div class="premio-footer padding-top-10 width-100 text-center">
+    <button class="button button-positive width-100" ng-click="">
+      <img style="vertical-align:middle" class="icon-slide padding-5" src="img/icon-gift-white.png">
+      <span class="text-wrap">Confirmar Canje</span>
+    </button>
+  </div>
 </ion-view>

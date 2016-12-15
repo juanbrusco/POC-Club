@@ -79,18 +79,24 @@ ion-tabs.tabs-striped.tabs-color-active-positive .tab-item.tab-item-active, ion-
 }
 
 .icon-slide{
-  widht:50%;
-  height:50%;
+  widht:40%;
+  height:40%;
 }
 
 @media (max-width: 400px) {
   .logo-header{
     width: 45%;
   }
+  #shareimg{
+    width: 45%;
+  }
 }
 
 @media (min-width: 401px) and (max-width: 480px) {
   .logo-header{
+    width: 30%;
+  }
+  #shareimg{
     width: 30%;
   }
 }

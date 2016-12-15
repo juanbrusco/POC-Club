@@ -1,5 +1,5 @@
 angular.module('descuentos.controller', [])
-  .controller('DescuentosCtrl', function($scope,$ionicPopup,Descuentos,$state) {
+  .controller('DescuentosCtrl', function($scope,$ionicPopup,Descuentos,$state,$ionicTabsDelegate) {
     $scope.dDescuentos = [];
     Descuentos.destacados().then(function(data){
       $scope.dDestacados = data
@@ -54,6 +54,7 @@ angular.module('descuentos.controller', [])
     };
 
     $scope.getDetailDescuento = function (id) {
+      $ionicTabsDelegate.showBar(false);
       $state.go('tab.descuentos-detail', {'descuentoId': id});
     };
     // A confirm dialog

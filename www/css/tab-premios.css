@@ -101,16 +101,3 @@
   }
 }
 
-.custom-title-list{
-  width: 100%;
-  height: auto;
-  background-color: #d9186b;
-}
-.custom-title-list p{
-  text-align: center;
-  text-transform: uppercase;
-  font-family: "Platform-Light";
-  font-size: 18px;
-  color: #fff;
-  margin-bottom: 0px !important;
-}
