@@ -1,17 +1,60 @@
 <ion-view  view-title="<img  src='img/clubIsoLogoTipo.png' class='logo-header'/>">
-  <ion-content id="banner">
-    <section class="swipe">
-      <swiper effect="coverflow"
-              grab-cursor="false"
-              style="position: absolute;">
-        <slides>
-          <slide ng-repeat="slide in slides">
-              <img href="{{slide.link}}" ng-click="openWindow('{{slide.link}}')" ng-src={{slide.img}}/>
-          </slide>
-        </slides>
-        <prev></prev>
-        <next></next>
-      </swiper>
-    </section>
-  </ion-content>
+  <ion-pane id="banner">
+    <ion-content overflow-scroll="true">
+      <ion-slides ng-if="true" options="options" slider="data.slider" style="height: 50%;">
+        <ion-slide-page ng-repeat="slide in slides">
+          <img href="{{slide.link}}" ng-click="openWindow('{{slide.link}}')" ng-src={{slide.img}} onerror="this.src='img/no-image.png'" >
+        </ion-slide-page>
+
+      </ion-slides>
+      <div class="item item-avatar">
+        <img src="img/icon-club.png">
+        <h2>Pretty Hate Machine</h2>
+        <p>Nine Inch Nails</p>
+      </div>
+
+      <div class="item item-avatar">
+        <img src="img/icon-club.png">
+        <h2>Pretty Hate Machine</h2>
+        <p>Nine Inch Nails</p>
+      </div>
+      <div class="item item-avatar">
+        <img src="img/icon-club.png">
+        <h2>Pretty Hate Machine</h2>
+        <p>Nine Inch Nails</p>
+      </div>
+
+      <div class="item item-avatar">
+        <img src="img/icon-club.png">
+        <h2>Pretty Hate Machine</h2>
+        <p>Nine Inch Nails</p>
+      </div>
+      <div class="item item-avatar">
+        <img src="img/icon-club.png">
+        <h2>Pretty Hate Machine</h2>
+        <p>Nine Inch Nails</p>
+      </div>
+
+      <div class="item item-avatar">
+        <img src="img/icon-club.png">
+        <h2>Pretty Hate Machine</h2>
+        <p>Nine Inch Nails</p>
+      </div>
+
+    </ion-content>
+
+    <!--<section class="swipe">-->
+      <!--<swiper effect="coverflow"-->
+              <!--grab-cursor="false"-->
+              <!--style="position: absolute;">-->
+        <!--<slides>-->
+          <!--<slide ng-repeat="slide in slides">-->
+              <!--<img href="{{slide.link}}" ng-click="openWindow('{{slide.link}}')" ng-src={{slide.img}}/>-->
+          <!--</slide>-->
+        <!--</slides>-->
+        <!--<prev></prev>-->
+        <!--<next></next>-->
+      <!--</swiper>-->
+    <!--</section>-->
+  </ion-pane>
 </ion-view>
