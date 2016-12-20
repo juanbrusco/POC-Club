@@ -13,6 +13,7 @@ angular.module('clubApp', ['ionic',
                            'descuentosDetail.controller',
                            'premiosDetail.controller',
                            'tabs.controller',
+                           'cercanos.controller',
                            'starter.services'])
 
 .run(function($ionicPlatform) {
@@ -61,8 +62,8 @@ angular.module('clubApp', ['ionic',
       url: '/cercanos',
       views: {
         'tab-cercanos': {
-          templateUrl: 'templates/tab-descuentos.html',
-          controller: 'DescuentosCtrl'
+          templateUrl: 'templates/tab-cercanos.html',
+          controller: 'CercanosCtrl'
         }
       }
     })
