@@ -65,24 +65,29 @@
 
   <!-- Side Menu (left) -->
   <ion-side-menu side="left">
-    <ion-header-bar class="bar-positive">
-      <h1 class="title">Usuario/Línea</h1>
+    <ion-header-bar class="bar-positive custom-item-profile">
+      <img src="img/mario.jpg">
+      <h2 class="title" style="left:40px!important;margin-left:0px!important;font-size:15px!important;">Usuario_nombre/15555555</h2>
     </ion-header-bar>
     <ion-content>
       <div class="list custom-side-menu">
-        <a class="item item-icon-left custom-item-side" href="#">
+        <a class="item item-icon-left custom-item-side" ng-click="iniciarSesion()">
           <i class="icon"><img class="icon-slide" src="img/login.png"></i>
-          Login
+          Ingresar
         </a>
-        <a class="item item-icon-left custom-item-side" href="#">
+        <a class="item item-icon-left custom-item-side" ng-click="cerrarSesion()">
           <i class="icon"><img class="icon-slide" src="img/logout.png"></i>
-          Logout
+          Cerrar Sesión
         </a>
-        <a class="item item-icon-left custom-item-side" href="#">
+        <a class="item item-icon-left custom-item-side"  ng-click="getDatosPerfil()">
           <i class="icon"><img class="icon-slide" src="img/user.png"></i>
           Mis datos
         </a>
-        <a class="item item-icon-left custom-item-side" href="#">
+        <a class="item item-icon-left custom-item-side" ng-click="getAjustes()">
+          <i class="icon"><img class="icon-slide" src="img/settings.png"></i>
+          Ajustes
+        </a>
+        <a class="item item-icon-left custom-item-side" ng-click="getAcerca()">
           <i class="icon"><img class="icon-slide" src="img/info.png"></i>
           Acerca de...
         </a>
