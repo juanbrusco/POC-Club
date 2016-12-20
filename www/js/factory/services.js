@@ -35,6 +35,15 @@ angular.module('starter.services', [])
         });
     }
 
+    var getCercanos = function() {
+      return $http.get("https://club.personal.com.ar/club/services/catalog/items?",
+        {params:{$catalogItemType: 2, isForm: true, page: 1}})
+        .then(function(response) {
+          more = response.data;
+          return more;
+        });
+    }
+
     return {
       destacados: getDesDestacados,
 
@@ -46,7 +55,10 @@ angular.module('starter.services', [])
 
       incrementCount:function(){
         countD++;
-      }
+      },
+
+      cercanos: getCercanos
+
     };
   })
 

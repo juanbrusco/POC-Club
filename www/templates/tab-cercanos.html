@@ -1,0 +1,41 @@
+<ion-view  cache-view="true" view-title="<img  src='img/clubIsoLogoTipo.png' class='logo-header'/>" ng-controller="CercanosCtrl">
+  <ion-content >
+    <div id="map" data-tap-disabled="true"></div>
+    <div class="custom-title-list">
+      <p>CATÁLOGO COMPLETO</p>
+    </div>
+    <ion-list>
+      <div class="list">
+        <div class="item row custom-item" ng-click="getDetailDescuento(cercano.id)" ng-repeat="cercano in cercanos" >
+          <div class="col col-33">
+            <img class="custom-img" ng-src="{{cercano.logoProveedor}}"/>
+          </div>
+          <div class="col col-33">
+            <div class="content-middle text-center" style="width: 100%;">
+              <p class="title-descuento item-middle">{{cercano.name}} <br>
+                <img alt="*" src="img/ico-phonito.png"><span class="title-premio"> Enviá gratis </span>
+                <span class="text-primary text-uppercase">{{cercano.keywordSMS}} </span><span class="title-descuento">al </span><span class="text-primary">3372</span>
+              </p>
+            </div>
+          </div>
+          <div class="col col-33">
+            <div class="content-middle" style="width: 100%;">
+            <span class="item-middle">
+              <div class="custom-barra-descuentos text-center">
+              <div class="category descuento1"></div> <span class="title-premio"> 20%</span> <br>
+              <div class="category descuento2"></div> <span class="title-premio"> 20%</span> <br>
+              <div class="category descuento3"></div> <span class="title-premio"> 20%</span> <br>
+              <div class="category descuento4"></div> <span class="title-premio"> 20%</span> <br>
+            </div>
+            </span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </ion-list>
+   <!-- <ion-infinite-scroll
+      on-infinite="loadMoreD()"
+      distance="1%">
+    </ion-infinite-scroll>-->
+  </ion-content>
