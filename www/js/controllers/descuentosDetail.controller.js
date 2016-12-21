@@ -1,8 +1,13 @@
 angular.module('descuentosDetail.controller', ['ionic','ngCordova'])
-  .controller('DescuentosDetailCtrl', function($scope, $stateParams, Descuentos, $cordovaGeolocation, $ionicLoading, $cordovaSms, $cordovaSocialSharing,$ionicHistory, $rootScope, $cordovaKeyboard) {
+  .controller('DescuentosDetailCtrl', function($scope, $stateParams, Descuentos, $cordovaGeolocation, $ionicLoading, $cordovaSms, $cordovaSocialSharing,$ionicHistory, $rootScope, $cordovaKeyboard, $location, $ionicPlatform, $ionicTabsDelegate, $ionicLoading) {
+
+    $ionicLoading.show({
+      template: '<ion-spinner icon="bubbles"></ion-spinner><br/>Cargando...'
+    });
 
     Descuentos.getDescuentoDetail($stateParams.descuentoId).then(function(data){
       $scope.descuentoDetail = data
+      $ionicLoading.hide();
     });
 
     Descuentos.getMultimedia($stateParams.descuentoId).then(function(data){
@@ -52,6 +57,11 @@ angular.module('descuentosDetail.controller', ['ionic','ngCordova'])
     $scope.shareSMS = function(keyword,number) {
       window.plugins.socialsharing.shareViaSMS(keyword,number.toString(), function(msg) {console.log('ok: ' + msg)}, function(msg) {alert('error: ' + msg)})
     }
+
+    $ionicPlatform.registerBackButtonAction(function() {
+      $ionicHistory.goBack();
+      $ionicTabsDelegate.showBar(true);
+    }, 100);
 
     $scope.myGoBack = function() {
       $ionicHistory.goBack();
