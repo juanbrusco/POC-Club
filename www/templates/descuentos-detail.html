@@ -1,6 +1,23 @@
-<ion-view view-title="Detalle de Descuento">
+<ion-view can-swipe-back="false">
+
+  <ion-nav-title>
+    Detalle de Descuento
+    <div class="bar bar-header text-right">
+
+    </div>
+
+  </ion-nav-title>
+
+  <ion-nav-buttons side="right">
+    <!--<button class="button button-clear button-positive"   style="position: absolute;right: 2px" ng-click="shareAnywhere(descuentoDetail.description)">CC</button>-->
+    <a class="button button-icon icon ion-ios-upload-outline" ng-click="shareAnywhere(descuentoDetail.description)"></a>
+
+  </ion-nav-buttons>
+
+
   <ion-content class="padding" ng-controller="DescuentosDetailCtrl">
-    <button class="button" ng-click="shareAnywhere(descuentoDetail.description)">Share</button>
+
+    <!--<button class="button" ng-click="shareAnywhere(descuentoDetail.description)">Share</button>-->
     <div class="descuento-header">
       <div class="item item-avatar">
         <img ng-src="{{descuentoDetail.image}}">
@@ -60,16 +77,19 @@
         <!--</div>-->
         <!--<p class="item text-left text-wrap">{{descuentoDetail.legales}}</p>-->
       </div>
-    </div>
-    <div style="height:50%; width:100%;">
       <div id="map" data-tap-disabled="true"></div>
-    </div>
-    <div class="descuento-footer padding-top-10 padding-bottom-10 width-100 text-center">
-      <button class="button button-positive width-100" ng-click="sendSms(descuentoDetail.keywordSMS, 3372)">
-        <img style="vertical-align:middle" class="icon-slide padding-5" src="img/icon-sms-white.png">
-        <span class="text-wrap">Enviá&nbsp;{{descuentoDetail.keywordSMS}}
-          &nbsp;al&nbsp;3372</span>
-      </button>
+      <br>
+      <br>
+      <br>
+      <br>
     </div>
   </ion-content>
+  <div class="descuento-footer padding-top-10 width-100 text-center">
+    <button class="button button-positive width-100" ng-click="shareSMS(descuentoDetail.keywordSMS, 3372)">
+      <img style="vertical-align:middle" class="icon-slide padding-5" src="img/icon-sms-white.png">
+      <span class="text-wrap">Enviá&nbsp;{{descuentoDetail.keywordSMS}}
+          &nbsp;al&nbsp;3372</span>
+    </button>
+  </div>
+
 </ion-view>
