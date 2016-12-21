@@ -3,24 +3,19 @@
     <ion-content overflow-scroll="true">
       <ion-slides ng-if="true" options="options" slider="data.slider" style="height: 50%; wiidth:100%;">
         <ion-slide-page ng-repeat="slide in slides" style="text-align: center;">
-          <img style="position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;" ng-click="openWindow('{{slide.link}}')" ng-src={{slide.img}} onerror="this.src='img/no-image.png'" >
+          <img style="position: absolute;top: 0; bottom: 0; left: 0; right: 0; margin: auto;" ng-click="openWindow('{{slide.link}}')" ng-src={{slide.img}} onerror="this.src='img/no-image.png'" >
         </ion-slide-page>
 
       </ion-slides>
 
       <div >
-        <img class="full-image" ng-src="img/h1_dto.jpg">
+        <img class="full-image" ng-src="img/h1_dto.jpg" ng-click="openWindow('http://tienda.personal.com.ar/equipos/175?map=c,productClusterIds&icn=promo_tienda&ici=dto._h1_home&sc=1')">
       </div>
       <div >
-        <img class="full-image" ng-src="img/play.png">
+        <img class="full-image" ng-src="img/play.png" ng-click="openWindow('http://play.personal.com.ar/?icn=Personal_play&ici=Personal_play_modulo_home')">
       </div>
       <div >
-        <img class="full-image" ng-src="img/mi-cuenta.png">
+        <img class="full-image" ng-src="img/mi-cuenta.png" ng-click="openWindow('https://miperfil.personal.com.ar/login/')">
       </div>
     </ion-content>
 
