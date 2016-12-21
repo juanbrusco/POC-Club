@@ -17,10 +17,6 @@ angular.module('premios.controller', [])
       });
     };
 
-    $scope.$on('$stateChangeSuccess', function() {
-      $scope.loadMore();
-    });
-
     getPremio = function(premioId) {
       for (var i = 0; i < $scope.pDestacados.length; i++) {
         if ($scope.pDestacados[i].id === parseInt(premioId)) {
