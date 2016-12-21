@@ -1,9 +1,6 @@
 <!--https://github.com/DarrylD/ionic-ripple-->
 <ion-view view-title="<img  src='img/clubIsoLogoTipo.png' class='logo-header'/>">
   <ion-content ng-controller="PremiosCtrl">
-    <div class="custom-title-list">
-      <p>DESTACADOS</p>
-    </div>
     <ion-list>
       <div class="list">
         <div class="item row custom-item" ng-click="getDetailPremio(pDestacado.id)" ng-repeat="pDestacado in pDestacados">
@@ -18,8 +15,8 @@
               <p class="title-premio item-middle text-center">{{pDestacado.name}}</p>
             </div>
           </div>
-          <div class="col col-33">
-            <div class="content-middle" style="width: 100%;">
+          <div class="col col-33 col-fondo-puntos">
+            <div class="content-middle fondo-puntos" style="width: 80%;">
               <span class="item-middle">
               <p class="puntos-premio">{{pDestacado.pointsValue}}&nbsp;Puntos</p>
               </span>
@@ -29,7 +26,7 @@
       </div>
     </ion-list>
     <div class="custom-title-list">
-      <p>CATÁLOGO COMPLETO</p>
+      <p>Catálogo completo</p>
     </div>
     <ion-list>
       <div class="list">
@@ -42,8 +39,8 @@
               <p class="title-premio item-middle text-center">{{premio.name}}</p>
             </div>
           </div>
-          <div class="col col-33">
-            <div class="content-middle" style="width: 100%;">
+          <div class="col col-33 col-fondo-puntos">
+            <div class="content-middle fondo-puntos" style="width: 80%;">
               <span class="item-middle">
               <p class="puntos-premio">{{premio.pointsValue}}&nbsp;Puntos</p>
               </span>

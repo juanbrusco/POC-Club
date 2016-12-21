@@ -951,18 +951,19 @@
   background: #00b4c5;
 }
 
-.custom-title-list {
+
+
+
+.custom-title-list{
   width: 100%;
   height: auto;
-  /*background-color: #d9186b;*/
+  background-color: #00b5c8;
 }
-
-.custom-title-list p {
+.custom-title-list p{
   text-align: center;
-  text-transform: uppercase;
   font-family: "Platform-Light";
-  font-size: 20px;
-  color: #d9186b;
+  font-size: 18px;
+  color: #fff;
   margin-bottom: 0px !important;
 }
 

@@ -1,18 +1,15 @@
 <ion-view  cache-view="true" view-title="<img  src='img/clubIsoLogoTipo.png' class='logo-header'/>">
     <ion-content >
-      <div class="custom-title-list">
-        <p>DESTACADOS</p>
-      </div>
       <ion-list>
        <div class="list">
           <div class="item row custom-item" ng-click="getDetailDescuento(dDestacado.id)" ng-repeat="dDestacado in dDestacados" >
-            <div class="col col-33">
+            <div class="imagenDescuento col col-30">
               <img class="custom-img" ng-src="{{dDestacado.logoProveedor}}"/>
               <div class="custom-destacado">
                 <p>Destacado</p>
               </div>
             </div>
-            <div class="col col-33">
+            <div class="col col-40">
               <div class="content-middle text-center" style="width: 100%;">
                 <p class="title-descuento item-middle">{{dDestacado.name}} <br>
                 <img alt="*" src="img/ico-phonito.png"><span class="title-descuento"> Enviá gratis </span>
@@ -20,14 +17,22 @@
                 </p>
               </div>
             </div>
-            <div class="col col-33">
+            <div class="col col-30">
               <div class="content-middle" style="width: 100%;">
             <span class="item-middle">
               <div class="custom-barra-descuentos text-center">
-              <div class="category descuento1"></div> <span class="title-premio"> 20%</span> <br>
-              <div class="category descuento2"></div> <span class="title-premio"> 20%</span> <br>
-              <div class="category descuento3"></div> <span class="title-premio"> 20%</span> <br>
-              <div class="category descuento4"></div> <span class="title-premio"> 20%</span> <br>
+                <div>
+              <div class="category descuento1"></div> <span class="title-descuento"> 20%</span> <br>
+                  </div>
+                <div>
+              <div class="category descuento2"></div> <span class="title-descuento"> 20%</span> <br>
+                </div>
+                <div>
+              <div class="category descuento3"></div> <span class="title-descuento"> 20%</span> <br>
+              </div>
+                <div>
+              <div class="category descuento4"></div> <span class="title-descuento"> 20%</span> <br>
+            </div>
             </div>
             </span>
               </div>
@@ -36,15 +41,15 @@
         </div>
       </ion-list>
       <div class="custom-title-list">
-        <p>CATÁLOGO COMPLETO</p>
+        <p>Catálogo completo</p>
       </div>
       <ion-list>
         <div class="list">
           <div class="item row custom-item" ng-click="getDetailDescuento(descuento.id)" ng-repeat="descuento in dDescuentos" >
-            <div class="col col-33">
+            <div class="imagenDescuento col col-30">
               <img class="custom-img" ng-src="{{descuento.logoProveedor}}"/>
             </div>
-            <div class="col col-33">
+            <div class="col col-40">
               <div class="content-middle text-center" style="width: 100%;">
                 <p class="title-descuento item-middle">{{descuento.name}} <br>
                   <img alt="*" src="img/ico-phonito.png"><span class="title-premio"> Enviá gratis </span>
@@ -52,14 +57,14 @@
                 </p>
               </div>
             </div>
-            <div class="col col-33">
+            <div class="col col-30">
               <div class="content-middle" style="width: 100%;">
             <span class="item-middle">
               <div class="custom-barra-descuentos text-center">
-              <div class="category descuento1"></div> <span class="title-premio"> 20%</span> <br>
-              <div class="category descuento2"></div> <span class="title-premio"> 20%</span> <br>
-              <div class="category descuento3"></div> <span class="title-premio"> 20%</span> <br>
-              <div class="category descuento4"></div> <span class="title-premio"> 20%</span> <br>
+              <div class="category descuento1"></div> <span class="title-descuento"> 20%</span> <br>
+              <div class="category descuento2"></div> <span class="title-descuento"> 20%</span> <br>
+              <div class="category descuento3"></div> <span class="title-descuento"> 20%</span> <br>
+              <div class="category descuento4"></div> <span class="title-descuento"> 20%</span> <br>
             </div>
             </span>
               </div>

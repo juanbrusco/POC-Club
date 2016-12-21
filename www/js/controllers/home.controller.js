@@ -7,16 +7,18 @@ angular.module('home.controller', ['ui.swiper'])
       // window.open(data,'_system');
     };
     $scope.slides = [
+      {img: "http://arcdn02.mundotkm.com/2016/10/persona.jpg",
+        link: "http://www.personalfest.com.ar/#!/home"
+      },
+      {img: "http://www.esquinarockweb.com.ar/imgPag/personalfestflyer16.jpg",
+        link: "http://www.personalfest.com.ar/#!/home"
+      },
       {
         img: "http://www.indiehoy.com/wp-content/uploads/2016/06/personal-fest-2016.jpg",
         link: "http://www.personalfest.com.ar/#!/home"
       },
       {
-        img: "http://www.personalfest.com.ar/images/horarios.jpg",
-        link: "http://www.personalfest.com.ar/#!/home"
-      },
-      {
-        img: "http://www.personalfest.com.ar/images/mapa_predio.jpg",
+        img: "https://i2.wp.com/fandeldescuento.com/wp-content/uploads/2016/11/ya-estas-pensando-en-tus-proximas-vacaciones-con-clubpersona-2016-11-15.jpg?fit=800%2C418&ssl=1",
         link: "http://www.personalfest.com.ar/#!/home"
       }];
 

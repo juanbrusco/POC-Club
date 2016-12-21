@@ -34,17 +34,35 @@
 
 @media (max-width: 363px){
   .custom-item{
-    height: 122px !important;
+
   }
 }
+
 
 @media (min-width: 480px) and (max-width: 800px) {
   .title-descuento{
     font-size: 18px !important;
+
+  }
+
+  .custom-barra-descuentos .title-descuento{
+
+    font-size: 22px !important;
+    font-family: "Lato-Regular";
+
   }
 
   .text-primary{
     font-size: 18px !important;
+  }
+
+
+  .category {
+
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
   }
 }
 
@@ -55,8 +73,21 @@
     font-size: 22px !important;
   }
 
+  .custom-barra-descuentos .title-descuento{
+    font-size: 32px !important;
+  }
+
   .text-primary{
     font-size: 22px !important;
+  }
+
+
+  .category {
+
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
   }
 }
 
@@ -67,9 +98,55 @@
     font-size: 24px !important;
   }
 
+  .custom-barra-descuentos .title-descuento{
+    font-size: 32px !important;
+  }
+
   .text-primary{
     font-size: 24px !important;
   }
+
+
+  .category {
+
+    width: 70px;
+    height: 70px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+@media  (max-width: 479px) {
+
+  .title-descuento{
+    font-size: 14px !important;
+
+  }
+
+  .custom-barra-descuentos .title-descuento{
+
+    font-size: 14px !important;
+    font-family: "Lato-Regular";
+    text-align: center;
+    line-height: 1.5 !important;
+    overflow: visible !important;
+    white-space: normal !important;
+
+  }
+
+  .text-primary{
+    font-size: 14px !important;
+  }
+
+
+  .category {
+
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
 }
 
 
@@ -92,11 +169,10 @@
 .custom-barra-descuentos .category {
   text-align: center;
   padding-top: 1px;
-  width: 15px;
-  height: 15px;
   background-repeat: no-repeat;
   background-position: center center;
   display: inline-block;
+
 }
 
 .custom-barra-detail-descuentos .detailCategory {
@@ -146,4 +222,23 @@ scroll {
   height: 100%;
 }
 
+.imagenDescuento{
+  align-self: center;
+}
 
+
+.card{
+  color: #555;
+  text-align: left;
+  padding: 0px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 2px 2px #ccc;
+  box-shadow: 0 2px 2px #ccc;
+  overflow: hidden;
+  position: relative;
+  width: 96%;
+  display: -webkit-flex;
+}
