@@ -1,18 +1,18 @@
-<ion-view can-swipe-back="false">
+<ion-view can-swipe-back="false" view-title="Detalle Descuento">
 
-  <ion-nav-title>
-    Detalle de Descuento
-    <div class="bar bar-header text-right">
+  <ion-nav-bar class="bar-positive">
+    <ion-nav-buttons side="left">
+      <a class="button button-icon icon ion-ios-arrow-back" ng-click="goBack()">Volver</a>
 
-    </div>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+      <!--<button class="button button-clear button-positive"   style="position: absolute;right: 2px" ng-click="shareAnywhere(descuentoDetail.description)">CC</button>-->
+      <a class="button button-icon icon ion-ios-upload-outline" ng-click="shareAnywhere(descuentoDetail.description)"></a>
 
-  </ion-nav-title>
+    </ion-nav-buttons>
+  </ion-nav-bar>
 
-  <ion-nav-buttons side="right">
-    <!--<button class="button button-clear button-positive"   style="position: absolute;right: 2px" ng-click="shareAnywhere(descuentoDetail.description)">CC</button>-->
-    <a class="button button-icon icon ion-ios-upload-outline" ng-click="shareAnywhere(descuentoDetail.description)"></a>
 
-  </ion-nav-buttons>
 
 
   <ion-content class="padding" ng-controller="DescuentosDetailCtrl">

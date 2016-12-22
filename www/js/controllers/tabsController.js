@@ -1,13 +1,18 @@
 angular.module('tabs.controller', ['ionic'])
-  .controller('TabsCtrl', function($scope, $stateParams,$rootScope,$ionicTabsDelegate,$ionicHistory,$state, $ionicPopup) {
-
-
-    $rootScope.isDetalle=true;
-
+  .controller('TabsCtrl', function($scope, $stateParams,$ionicTabsDelegate,$ionicHistory,$state, $ionicPopup, Descuentos) {
 
     $scope.showBar = function(){
       $ionicHistory.goBack();
-      $ionicTabsDelegate.showBar(true);
+    };
+
+    $scope.login = function () {  
+      Descuentos.login().then(function(data){ 
+        var coo = $cookies.getAll();
+        var l = data;
+      }).success(function(data){
+        var coo = $cookies.getAll();
+        var l = data;
+      });
     };
 
     // PopUp custom
@@ -29,7 +34,7 @@ angular.module('tabs.controller', ['ionic'])
             text: 'Ingresar',
             type: 'button-positive',
             onTap: function(e) {
-              return true;
+              $scope.login();
             }
           },
         ]

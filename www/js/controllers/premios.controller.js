@@ -32,8 +32,8 @@ angular.module('premios.controller', [])
     },
 
     $scope.getDetailPremio = function (id) {
-      $ionicTabsDelegate.showBar(false);
-      $state.go('tab.premios-detail', {'premioId': id});
+      // Parametro back se usa para saber quien lo llamo, y a donde debo volver.
+      $state.go('premiosDetail', {'premioId': id,'back':'tab.premios'});
     };
 
 

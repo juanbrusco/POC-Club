@@ -1,10 +1,17 @@
-<ion-view can-swipe-back="false">
-  <ion-nav-title>
-    Detalle de Premio
-  </ion-nav-title>
-  <ion-nav-buttons side="right">
-    <a class="button button-icon icon ion-ios-upload-outline" ng-click=""></a>
-  </ion-nav-buttons>
+<ion-view can-swipe-back="false" view-title='Detalle de Premio'>
+
+   <ion-nav-bar class="bar-positive">
+    <ion-nav-buttons side="left">
+      <a class="button button-icon icon ion-ios-arrow-back" ng-click="goBack()">Volver</a>
+
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+      <!--<button class="button button-clear button-positive"   style="position: absolute;right: 2px" ng-click="shareAnywhere(descuentoDetail.description)">CC</button>-->
+      <a class="button button-icon icon ion-ios-upload-outline" ng-click="shareAnywhere(descuentoDetail.description)"></a>
+
+    </ion-nav-buttons>
+  </ion-nav-bar>
+
   <ion-content class="padding" ng-controller="PremiosDetailCtrl">
     <div class="premio-header">
       <div class="item item-avatar">

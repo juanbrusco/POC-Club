@@ -1,5 +1,5 @@
 angular.module('premiosDetail.controller', [])
-  .controller('PremiosDetailCtrl', function($scope, $stateParams, Premios, $ionicLoading, $rootScope) {
+  .controller('PremiosDetailCtrl', function($scope, $stateParams, Premios, $ionicLoading,$ionicPlatform, $state) {
 
     $ionicLoading.show({
       template: '<ion-spinner icon="bubbles"></ion-spinner><br/>Cargando...'
@@ -10,11 +10,13 @@ angular.module('premiosDetail.controller', [])
       $ionicLoading.hide();
     });
 
-    $rootScope.isDetalle=true;
+    $ionicPlatform.registerBackButtonAction(function() {
+      $scope.goBack();
+    }, 100);
 
-    $scope.myGoBack = function() {
-      $ionicHistory.goBack();
-    };
+    $scope.goBack= function(){
+      $state.go($stateParams.back, {});
+    }
 
   })
 

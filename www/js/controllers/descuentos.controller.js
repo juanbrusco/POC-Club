@@ -28,7 +28,6 @@ angular.module('descuentos.controller', [])
     },
 
     $scope.getDetailDescuento = function (id) {
-      $ionicTabsDelegate.showBar(false);
-      $state.go('tab.descuentos-detail', {'descuentoId': id});
+      $state.go('descuentosDetail', {'descuentoId': id,'back':'tab.descuentos'});
     };
   });
