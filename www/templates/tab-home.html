@@ -1,7 +1,7 @@
 <ion-view  view-title="<img  src='img/clubIsoLogoTipo.png' class='logo-header'/>">
   <ion-pane id="banner">
     <ion-content overflow-scroll="true">
-      <ion-slides ng-if="true" options="options" slider="data.slider" style="height: 50%; wiidth:100%;">
+      <ion-slides ng-if="true" options="options" slider="data.slider" class="custom-slides" style="height: 50%; wiidth:100%;">
         <ion-slide-page ng-repeat="slide in slides" style="text-align: center;">
           <img style="position: absolute;top: 0; bottom: 0; left: 0; right: 0; margin: auto;" ng-click="openWindow('{{slide.link}}')" ng-src={{slide.img}} onerror="this.src='img/no-image.png'" >
         </ion-slide-page>
