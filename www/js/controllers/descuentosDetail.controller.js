@@ -1,5 +1,5 @@
 angular.module('descuentosDetail.controller', ['ionic','ngCordova'])
-  .controller('DescuentosDetailCtrl', function($scope, $stateParams, Descuentos, $cordovaGeolocation, $ionicLoading, $cordovaSms, $cordovaSocialSharing,$ionicHistory, $cordovaKeyboard, $location, $ionicPlatform, $ionicTabsDelegate, $ionicLoading,$state) {
+  .controller('DescuentosDetailCtrl', function($scope, $stateParams, Descuentos, $cordovaGeolocation, $ionicLoading, $cordovaSms, $cordovaSocialSharing,$ionicHistory, $cordovaKeyboard, $location, $ionicPlatform, $ionicTabsDelegate, $ionicLoading,$state,$ionicPlatform) {
 
     $ionicLoading.show({
       template: '<ion-spinner icon="bubbles"></ion-spinner><br/>Cargando...'

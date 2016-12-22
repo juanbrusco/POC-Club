@@ -34,12 +34,12 @@ angular.module('cercanos.controller', [])
           mapTypeId: google.maps.MapTypeId.ROADMAP
         };
 
-        var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+        var map = new google.maps.Map(document.getElementById("map-cercanos"), mapOptions);
 
-        $scope.map = map;
+        $scope.mapCercanos = map;
 
         // $ionicLoading.hide();
-        google.maps.event.addListenerOnce($scope.map, 'idle', function(){
+        google.maps.event.addListenerOnce($scope.mapCercanos, 'idle', function(){
 
           // Add 5 markers to map at random locations.
           // For each of these markers, give them a title with their index, and when
@@ -88,7 +88,7 @@ angular.module('cercanos.controller', [])
       });
 
       marker.addListener('click', function() {
-        infowindow.open(marker.get('map'), marker);
+        infowindow.open(marker.get('map-cercanos'), marker);
       });
     }
   });

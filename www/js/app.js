@@ -76,8 +76,7 @@ angular.module('clubApp', ['ionic',
       views: {
         'tab-descuentos': {
           templateUrl: 'templates/tab-descuentos.html',
-          controller: 'DescuentosCtrl',
-          params: {'descuentoId': null}
+          controller: 'DescuentosCtrl'
         }
       }
     })
