@@ -73,19 +73,16 @@ angular.module('clubApp', ['ionic',
       views: {
         'tab-descuentos': {
           templateUrl: 'templates/tab-descuentos.html',
-          controller: 'DescuentosCtrl'
+          controller: 'DescuentosCtrl',
+          params: {'descuentoId': null}
         }
       }
     })
-    .state('tab.descuentos-detail', {
-      url: '/descuentos/detail',
-      views: {
-        'tab-descuentos': {
-          templateUrl: 'templates/descuentos-detail.html',
-          controller: 'DescuentosDetailCtrl'
-        }
-      },
-      params: {'descuentoId': null}
+    .state('descuentosDetail', {
+      url: '/descuentosDetail',
+      templateUrl: 'templates/descuentos-detail.html',
+      controller: 'DescuentosDetailCtrl',
+      params: {'descuentoId': null,'back':''}
     })
 
      //Premios
@@ -98,15 +95,11 @@ angular.module('clubApp', ['ionic',
       }
     }
   })
-    .state('tab.premios-detail', {
-      url: '/premios/detail',
-      views: {
-        'tab-premios': {
-          templateUrl: 'templates/premios-detail.html',
-          controller: 'PremiosDetailCtrl'
-        }
-      },
-      params: {'premioId': null}
+    .state('premiosDetail', {
+      url: '/premiosDetail',
+      templateUrl: 'templates/premios-detail.html',
+      controller: 'PremiosDetailCtrl',
+      params: {'premioId': null,'back':''}
     });
 
   // if none of the above states are matched, use this as the fallback
