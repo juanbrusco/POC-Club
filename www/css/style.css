@@ -1004,3 +1004,22 @@
   padding-top: 5px !important;
   padding-bottom: 0px !important;
 }
+
+#map-cercanos {
+  height: 300px;
+  width: auto;
+}
+/*.custom-slides{*/
+  /*height: 50% !important;*/
+  /*wiidth: 100% !important;*/
+/*}*/
+@media  (min-width: 480px) {
+  #map-cercanos {
+    height: 190px;
+    width: auto;
+  }
+  /*.custom-slides{*/
+    /*height: 80% !important;*/
+    /*wiidth: 100% !important;*/
+  /*}*/
+}
