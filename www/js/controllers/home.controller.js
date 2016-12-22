@@ -1,15 +1,21 @@
 angular.module('home.controller', ['ui.swiper'])
 
-  .controller('HomeCtrl', function($scope) {
+  .controller('HomeCtrl', function($scope, $state) {
+
+
+    document.addEventListener('backbutton', function(event){
+      if($state.is('tab.home')){
+        event.preventDefault(); // EDIT
+        navigator.app.exitApp(); // exit the app
+      }
+    });
+
 
     $scope.openWindow = function(data){
       cordova.InAppBrowser.open(data, '_system', 'location=yes');
       // window.open(data,'_system');
     };
     $scope.slides = [
-      {img: "http://arcdn02.mundotkm.com/2016/10/persona.jpg",
-        link: "http://www.personalfest.com.ar/#!/home"
-      },
       {img: "http://www.esquinarockweb.com.ar/imgPag/personalfestflyer16.jpg",
         link: "http://www.personalfest.com.ar/#!/home"
       },
