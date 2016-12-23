@@ -7,7 +7,7 @@
     </ion-nav-buttons>
     <ion-nav-buttons side="right">
       <!--<button class="button button-clear button-positive"   style="position: absolute;right: 2px" ng-click="shareAnywhere(descuentoDetail.description)">CC</button>-->
-      <a class="button button-icon icon ion-ios-upload-outline" ng-click="shareAnywhere(descuentoDetail.description)"></a>
+      <a class="button button-icon icon ion-ios-upload-outline" ng-click="shareAnywherePremio(premioDetail.name)"></a>
 
     </ion-nav-buttons>
   </ion-nav-bar>
@@ -69,7 +69,7 @@
     <br>
   </ion-content>
   <div class="premio-footer padding-top-10 width-100 text-center">
-    <button class="button button-positive width-100" ng-click="">
+    <button class="button button-positive width-100" ng-click="canjearPremio()">
       <img style="vertical-align:middle" class="icon-slide padding-5" src="img/icon-gift-white.png">
       <span class="text-wrap">Confirmar Canje</span>
     </button>
