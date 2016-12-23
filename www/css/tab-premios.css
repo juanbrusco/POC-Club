@@ -60,9 +60,13 @@
   white-space: normal !important;
 }
 
-@media (max-width: 363px){
-  .custom-item{
+@media (max-width: 479px){
+  .title-premio{
+    font-size: 14px !important;
+  }
 
+  .puntos-premio{
+    font-size: 14px !important;
   }
 }
 @media (min-width: 480px) and (max-width: 800px) {
@@ -70,7 +74,7 @@
 
 
   .title-premio{
-    font-size: 20px !important;
+    font-size: 18px !important;
   }
 
   .puntos-premio{
@@ -82,11 +86,11 @@
 
 
   .title-premio{
-    font-size: 22px !important;
+    font-size: 24px !important;
   }
 
   .puntos-premio{
-    font-size: 22px !important;
+    font-size: 24px !important;
   }
 }
 
@@ -94,11 +98,11 @@
 
 
   .title-premio{
-    font-size: 24px !important;
+    font-size: 28px !important;
   }
 
   .puntos-premio{
-    font-size: 24px !important;
+    font-size: 28px !important;
   }
 }
 

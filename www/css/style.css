@@ -1004,6 +1004,78 @@
   padding-top: 5px !important;
   padding-bottom: 0px !important;
 }
+@media (min-width: 970px) {
+
+  .custom-title-list{
+    width: 100%;
+    height: auto;
+    background-color: #00b5c8;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  .custom-title-list p{
+    text-align: center;
+    font-family: "Platform-Light";
+    font-size: 26px;
+    color: #fff;
+    margin-bottom: 0px !important;
+  }
+}
+
+
+@media (max-width: 970px) and (min-width: 800px){
+
+  .custom-title-list{
+    width: 100%;
+    height: auto;
+    background-color: #00b5c8;
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+  .custom-title-list p{
+    text-align: center;
+    font-family: "Platform-Light";
+    font-size: 22px;
+    color: #fff;
+    margin-bottom: 0px !important;
+  }
+}
+
+@media (max-width: 800px) and (min-width: 480px){
+
+  .custom-title-list{
+    width: 100%;
+    height: auto;
+    background-color: #00b5c8;
+    padding-top: 3px;
+    padding-bottom: 3px;
+  }
+  .custom-title-list p{
+    text-align: center;
+    font-family: "Platform-Light";
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 0px !important;
+  }
+}
+
+@media (max-width: 479px){
+
+  .custom-title-list{
+    width: 100%;
+    height: auto;
+    background-color: #00b5c8;
+    padding-top: 1px;
+    padding-bottom: 1px;
+  }
+  .custom-title-list p{
+    text-align: center;
+    font-family: "Platform-Light";
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 0px !important;
+  }
+}
 
 #map-cercanos {
   height: 300px;

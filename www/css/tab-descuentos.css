@@ -47,8 +47,12 @@
 
   .custom-barra-descuentos .title-descuento{
 
-    font-size: 22px !important;
+    font-size: 18px !important;
     font-family: "Lato-Regular";
+    text-align: center;
+    line-height: 1.5 !important;
+    overflow: visible !important;
+    white-space: normal !important;
 
   }
 
@@ -59,8 +63,8 @@
 
   .category {
 
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     margin-left: 10px;
     margin-right: 10px;
   }
@@ -74,7 +78,13 @@
   }
 
   .custom-barra-descuentos .title-descuento{
-    font-size: 32px !important;
+    font-size: 24px !important;
+    font-family: "Lato-Regular";
+    text-align: center;
+    line-height: 1.5 !important;
+    overflow: visible !important;
+    white-space: normal !important;
+
   }
 
   .text-primary{
@@ -84,8 +94,8 @@
 
   .category {
 
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     margin-left: 10px;
     margin-right: 10px;
   }
@@ -95,11 +105,16 @@
 
 
   .title-descuento{
-    font-size: 24px !important;
+    font-size: 26px !important;
   }
 
   .custom-barra-descuentos .title-descuento{
-    font-size: 32px !important;
+    font-size: 28px !important;
+    font-family: "Lato-Regular";
+    text-align: center;
+    line-height: 1.5 !important;
+    overflow: visible !important;
+    white-space: normal !important;
   }
 
   .text-primary{
@@ -109,8 +124,8 @@
 
   .category {
 
-    width: 70px;
-    height: 70px;
+    width: 35px;
+    height: 35px;
     margin-left: 10px;
     margin-right: 10px;
   }
