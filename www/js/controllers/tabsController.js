@@ -1,9 +1,15 @@
 angular.module('tabs.controller', ['ionic'])
-  .controller('TabsCtrl', function($scope, $stateParams,$ionicTabsDelegate,$ionicHistory,$state, $ionicPopup, Descuentos) {
+  .controller('TabsCtrl', function($scope, $stateParams,$ionicTabsDelegate,$ionicHistory,$state, $ionicPopup, Descuentos, $ionicPlatform) {
 
     $scope.showBar = function(){
       $ionicHistory.goBack();
     };
+
+    document.addEventListener('backbutton', function(event){
+      if(!$state.is('tab.home')){
+        $state.go('tab.home');
+      }
+    });
 
     $scope.login = function () {  
       Descuentos.login().then(function(data){ 
